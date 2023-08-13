@@ -63,3 +63,29 @@ a:hover {
   }
   animation: glow 2s infinite;
 }
+
+.sleeping-rooster-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; // Align the image to the start of the container
+  position: absolute;
+  top: 70%; // Adjust this value to move the image lower or higher on the page
+  right: 0;
+  bottom: 70;
+  left: 0;
+}
+
+.sleeping-rooster {
+  width: 700px; /* Adjust as needed */
+  animation: sleeping 2s infinite;
+  margin-top: 40px; // Add top margin to move the image lower
+}
+
+@keyframes sleeping {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}

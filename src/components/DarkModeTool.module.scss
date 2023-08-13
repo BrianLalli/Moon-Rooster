@@ -1,0 +1,48 @@
+.tooltip-container {
+    position: absolute;
+    top: 5px; // Adjust as needed
+    right: 35px; // Adjust as needed
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #000; // Arrow color
+    animation: bounce 1s infinite;
+  }
+  
+  .tooltip-text {
+    background: #f9f9f9; // Background color
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes popTooltip {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05); // Scales slightly larger
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
