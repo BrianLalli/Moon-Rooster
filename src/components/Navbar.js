@@ -31,6 +31,11 @@ const links = [
         to: '/brian-lalli-portfolio/resume',
         active: 'resume'
     },
+    // {
+    //     name: 'Contact',
+    //     to: '/brian-lalli-portfolio/contact',
+    //     active: 'contact'
+    // },
 ]
 
 export default function Navbar({darkMode, handleClick}) {

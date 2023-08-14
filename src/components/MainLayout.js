@@ -7,6 +7,7 @@ import Portfolio from "./Portfolio";
 import { Route, Routes } from "react-router-dom";
 import { Box, Grid } from "@mui/material";
 import Resume from "./Resume";
+// import Contact from "./Contact";
 
 export default function MainLayout() {
   let [darkMode, setDarkMode] = useState(false);
@@ -46,6 +47,11 @@ export default function MainLayout() {
               path={"/brian-lalli-portfolio/resume"}
               element={<Resume />}
             />
+             {/* <Route
+              exact
+              path={"/brian-lalli-portfolio/contact"}
+              element={<Contact />}
+            /> */}
           </Routes>
         </Grid>
 

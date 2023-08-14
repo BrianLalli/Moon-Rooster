@@ -35,6 +35,10 @@ const info = {
       emoji: "📧",
       text: "moonroosterdesigns@gmail.com",
     },
+    {
+      emoji: "📱",
+      text: "737-346-7797",
+    },
   ],
   socials: [
     {
