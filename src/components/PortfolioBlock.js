@@ -1,6 +1,8 @@
-import React from 'react';
+import React from "react";
 import IconLink from "./IconLink";
-import {Box} from "@mui/material";
+import { Box } from "@mui/material";
+import styles from '../App.module.scss';
+
 
 function PortfolioBlock(props) {
   const { image, live, source, title, description } = props;
@@ -10,36 +12,39 @@ function PortfolioBlock(props) {
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
+      style={{ height: "400px", marginTop: "70px" }}
     >
-      <Box component={"img"} src={image} alt={"mockup"} />
-      <h1 style={{ fontSize: "2rem" }}>{title}</h1>
+      <Box
+        component={"img"}
+        src={image}
+        alt={"mockup"}
+        style={{ height: "300px", width: "400px", objectFit: "cover" }} // Fixed height and width for the image
+      />
+      <h1 style={{ fontSize: "2rem", textAlign: "center" }}>{title}</h1>
       <Box
         display={"flex"}
         flexDirection={"column"}
         justifyContent={"center"}
         alignItems={"center"}
       >
-      <Box   
-        display={"flex"}
-        flexDirection={"column"}
-        justifyContent={"center"}
-        alignItems={"center"}/>
-        <p style={{ fontSize: "1.5rem" }}>{description}</p>
+        <p style={{ fontSize: "1.5rem", textAlign: "center" }}>{description}</p>
         <Box
           className={"portfolio"}
           display={"flex"}
           flexDirection={"column"}
+          justifyContent={"center"} // Center vertically
+          alignItems={"center"} // Center horizontally
           gap={"0.5rem"}
-          alignItems={"center"}
           fontSize={"1.5rem"}
           py={"2rem"}
         >
-          <Box p={1} border={"2px solid black"} borderRadius={"25px"}>
-            <IconLink link={live} title={"Live Demo"} icon={"fa fa-safari"} />
-          </Box>
-          <Box p={1} border={"2px solid black"} borderRadius={"25px"}>
-            <IconLink link={source} title={"Source Code"} icon={"fa fa-code"} />
-          </Box>
+<Box className={styles['icon-link-box']}>
+  <IconLink link={live} title={"Live Demo"} icon={"fa fa-safari"} />
+</Box>
+<Box className={styles['icon-link-box']}>
+  <IconLink link={source} title={"Source Code"} icon={"fa fa-code"} />
+</Box>
+
         </Box>
       </Box>
     </Box>

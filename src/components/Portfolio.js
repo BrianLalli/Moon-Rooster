@@ -7,11 +7,12 @@ import Project2 from "../img/Project2.png";
 import Project3 from "../img/Project3.png";
 import Project4 from "../img/Project4.png";
 import Project5 from "../img/Project 5.png";
-import Project6 from "../img/Project6.png";
+import Project6 from "../img/TheJewelLevineFoundation.png";
 import Project7 from "../img/Project7.png";
 import Project8 from "../img/Project8.png";
+import Project9 from "../img/FFStartSit.png"
 
-let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
+let colors = ["#F2F2F2", "#1c75bc"];
 
 const info = {
   firstName: "Brian",
@@ -23,6 +24,20 @@ const info = {
   baseColor: colors[0],
   portfolio: [
     // This is where your portfolio projects will be detailed
+    {
+      title: "The Jewel Levine Foundation",
+      description: "Charity Foundation Website",
+      live: "https://www.jewellevinefoundation.org/",
+      source: "https://www.jewellevinefoundation.org/",
+      image:Project6,
+    },
+    {
+      title: "Fantasy Football Start/Sit",
+      description: "This app uses an algorithm that calculates a player's firepower for each week and predicts who to start.",
+      live: "https://ff-start-em-sit-em.vercel.app/",
+      source: "https://github.com/BrianLalli/ff-start-em-sit-em",
+      image:Project9,
+    },
     {
       title: "oogl",
       description: "Logo Guessing Game",
@@ -71,13 +86,6 @@ const info = {
       live: "https://text-editor-pwa-bl.herokuapp.com/",
       source: "https://github.com/BrianLalli/text-editor",
       image: Project4,
-    },
-    {
-      title: "Brian Lalli Portfolio",
-      description: "Original Portfolio from 6/22 using HTML & CSS",
-      live: "https://brianlalli.github.io/Portfolio/",
-      source: "https://github.com/BrianLalli/Portfolio",
-      image: Project6,
     },
   ],
 }

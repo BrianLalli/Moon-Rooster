@@ -2,6 +2,8 @@ import React from "react";
 import Style from "./About.module.scss";
 import Terminal from "./Terminal";
 import { Box } from "@mui/material";
+import ScrollTrigger from "react-scroll-trigger";
+import me from "../img/self.png";
 // import {info} from "../../info/Info";
 
 let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
@@ -13,130 +15,124 @@ const info = {
   position: "a Website Developer & Designer",
   selfPortrait: "moonrooster",
   gradient: `-webkit-linear-gradient(135deg, ${colors})`,
-  baseColor: colors[0],
-  bio: "Hello! I'm Brian Lalli. I'm the Founder and Lead Developer for Moon Rooster. I studied Economics at Colgate University, and Software Development at The University of Texas at Austin. I am passionate about building websites with sleek designs and applications that make my life simpler!",
+  baseColor: "#61DBFB",
+  bio: "Hello, World! I'm Brian Lalli & I'm the Founder/Lead Developer at Moon Rooster. I am passionate about developing and designing websites and applications that make life simpler! I have 6 years of combined experience in E-Commerce, Data Analytics, and Software Development at companies like Amazon, Whole Foods Market, & Anheuser-Busch InBev.",
   skills: {
     proficientWith: [
-      "javascript",
-      "react",
-      "bootstrap",
-      "html5",
-      "css3",
-      "mongoDb",
-      "mySQL",
-      "graphQL",
-      "nodejs",
-      "Shopify",
-      "Wordpress",
-      "Squarespace",
-      "Wix",
-      "ChatGPT",
-      "figma",
-      "AWS",
-      "python",
-      "adobe illustrator",
-      "Tableau",
-      "git",
-      "github",
+      "Website Development",
+      "Website Design",
+      "Mobile App Development",
+      "E-Commerce Consulting",
+      "Data Analysis & Visualization",
     ],
   },
   hobbies: [
     {
-      label: "# of pages",
-      emoji: "📖",
-    },
-    {
-      label: "intricacy of design",
+      label: "Intricacy of design",
       emoji: "🎨",
     },
     {
-      label: "custom code requirements",
+      label: "Custom code requirements",
       emoji: "✍️",
     },
     {
-      label: "E-Commerce functionality requirement",
+      label: "E-commerce needs",
       emoji: "🛒",
+    },
+    {
+      label: "Amount of data",
+      emoji: "📊",
     },
     {
       label: "# of revisions",
       emoji: "⚒️",
     },
+    {
+      label: "# of pages",
+      emoji: "📖",
+    },
   ],
 };
 
 export default function About() {
+  const [fadeIn, setFadeIn] = React.useState(false);
   const firstName = info.firstName.toLowerCase();
 
   function aboutMeText() {
     return (
       <>
+        <div className={Style.imageContainer}>
+          <div
+            className={Style.imageWrapper}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <img
+              src={me}
+              alt="Brian Lalli"
+              className={Style.selfPortrait}
+              style={{
+                borderRadius: "50%", // Crop into a circle
+                width: "50%", // Make it half its current size
+              }}
+            />
+          </div>
+        </div>
         <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>
-            {firstName}
-            {info.lastName.toLowerCase()} $
-          </span>{" "}
-          cd It's a great night to be alive!{" "}
+          <span style={{ color: info.baseColor }}>About Me: </span>{" "}
         </p>
+        <p className={Style.fadeIn}>{info.bio}</p>
         <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>
-            about me <span className={Style.green}>(main)</span> ${" "}
-          </span>
-          {info.bio}
+          <span style={{ color: info.baseColor }}>For those curious about the name, Moon is my dog's name and Rooster is my spirit animal :) </span>{" "}
         </p>
       </>
     );
   }
-  
 
   function skillsText() {
     return (
-      <>
-        <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>
-            {firstName}
-            {info.lastName.toLowerCase()} $
-          </span>{" "}
-          cd skills/tools
-        </p>
-        <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>
-            skills/tools <span className={Style.green}>(main)</span> $
-          </span>{" "}
-          ls
-        </p>
-        {/* <p style={{color: info.baseColor}}> Expertise in</p> */}
-        <ul className={Style.skills}>
-          {info.skills.proficientWith.map((proficiency, index) => (
-            <li key={index}>{proficiency}</li>
-          ))}
-        </ul>
-        {/* <p style={{color: info.baseColor}}> Comfortable With</p>
-            <ul className={Style.skills}>
-                {info.skills.exposedTo.map((skill, index) => <li key={index}>{skill}</li>)}
-            </ul> */}
-      </>
+      <ScrollTrigger onEnter={() => setFadeIn(true)}>
+        <div className={fadeIn ? Style.fadeIn : Style.hidden}>
+          <p>
+            <span style={{ color: info.baseColor }}>Services Offered:</span>{" "}
+          </p>
+          <ul className={Style.skills}>
+            {info.skills.proficientWith.map((proficiency, index) => (
+              <li key={index}>{proficiency}</li>
+            ))}
+          </ul>
+
+          {/* Rest of your code */}
+        </div>
+      </ScrollTrigger>
     );
   }
-  
 
   function miscText() {
     return (
       <>
         <p className={Style.fadeIn}>
           <span style={{ color: info.baseColor }}>
-            {firstName}
-            {info.lastName.toLowerCase()} $
+          Pricing: $125/hr
           </span>{" "}
-          cd Pricing
         </p>
         <p className={Style.fadeIn}>
           <span style={{ color: info.baseColor }}>
-            Pricing is determined by the scope of the work{" "}
-            <span className={Style.green}>(main)</span> $
+            Prior to development, a quote will be provided based on the scope of the work and labor hours
+            required. <span className={Style.green}></span>
           </span>{" "}
-          ls factors include:
         </p>
-        <ul>
+        <p className={Style.fadeIn}>
+          <span style={{ color: info.baseColor }}>
+          Factors Include:
+          </span>{" "}
+        </p>
+        <ul className={Style.skills}>
           {info.hobbies.map((hobby, index) => (
             <li key={index}>
               <Box component={"span"} mr={"1rem"}>
@@ -149,7 +145,6 @@ export default function About() {
       </>
     );
   }
-  
 
   return (
     <Box

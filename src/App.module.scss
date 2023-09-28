@@ -37,3 +37,15 @@ img {
 ul {
     list-style-type: none;
 }
+
+.icon-link-box {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .icon-link-box:hover {
+    background-color: #1c75bc;
+    color: white;
+  }

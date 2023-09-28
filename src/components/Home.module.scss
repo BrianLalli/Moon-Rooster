@@ -67,18 +67,30 @@ a:hover {
 .sleeping-rooster-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start; // Align the image to the start of the container
+  align-items: center;
   position: absolute;
-  top: 70%; // Adjust this value to move the image lower or higher on the page
+  top: 320px;  // Adjust this value based on the height of your navbar
   right: 0;
-  bottom: 70;
+  bottom: 0;
   left: 0;
 }
 
 .sleeping-rooster {
-  width: 600px; /* Adjust as needed */
-  animation: sleeping 2s infinite;
-  margin-top: 40px; // Add top margin to move the image lower
+  width: 600px;
+  margin: 0; // Reset any margins
+}
+
+.hidden {
+  display: none;
+}
+
+.homepage-content {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.homepage-content.visible {
+  opacity: 1;
 }
 
 @keyframes sleeping {

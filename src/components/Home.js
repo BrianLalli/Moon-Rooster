@@ -5,10 +5,10 @@ import classNames from "classnames";
 import { Box } from "@mui/material";
 import EmojiBullet from "./EmojiBullet";
 import SocialIcon from "./SocialIcon";
-import DarkModeTooltip from "./DarkModeTool.js";
-import SleepingRooster from "../img/sleepingrooster.png";
+import DarkAnimation from "../img/darkanimation.mp4";
+import LightAnimation from "../img/lightanimation.mp4";
 
-let colors = ["#F2F2F2", "#A6A6A6"];
+let colors = ["#F2F2F2", "#1c75bc"];
 
 const info = {
   firstName: "Moon Rooster",
@@ -21,11 +21,11 @@ const info = {
   miniBio: [
     {
       emoji: "🧑‍💻",
-      text: "I build websites from scratch and redesign existing ones",
+      text: "I build and design websites",
     },
     {
       emoji: "🤖",
-      text: "I use a combination of code, AI, & no code tools",
+      text: "I use a combination of code, no-code, & AI tools",
     },
     {
       emoji: "🌎",
@@ -69,41 +69,59 @@ const info = {
   ],
 };
 
-export default function Home({ darkMode, handleDarkModeToggle }) {
-  // State to handle tooltip visibility, initially true if darkMode is false
-  const [showTooltip, setShowTooltip] = useState(!darkMode);
+export default function Home({ darkMode = true, handleDarkModeToggle }) {
+  const [showMainContent, setShowMainContent] = useState(false);
+  const [hideAnimation, setHideAnimation] = useState(false);
+  const [currentAnimation, setCurrentAnimation] = useState(
+    darkMode ? DarkAnimation : LightAnimation
+  );
 
-  // Update showTooltip whenever darkMode changes
+  const [contentVisible, setContentVisible] = useState(false);
+
   useEffect(() => {
-    setShowTooltip(!darkMode);
+    setCurrentAnimation(darkMode ? DarkAnimation : LightAnimation);
   }, [darkMode]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMainContent(true);
+      setHideAnimation(true); // Hide the animation
+    }, 10000); // Assuming the animation duration is 5000 milliseconds (5 seconds)
+
+    return () => clearTimeout(timer); // Cleanup
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setContentVisible(true);
+    }, 2000); // 2 seconds delay
+  }, []);
 
   return (
     <div style={{ position: "relative", height: "100%" }}>
-      {showTooltip && (
-        <DarkModeTooltip
-          onClick={handleDarkModeToggle}
-          style={{
-            position: "absolute",
-            top: "10px",
-            right: "10px",
-          }}
-        />
-      )}
-      {!darkMode && (
-        <div className={Style["sleeping-rooster-container"]}>
-          <img
-            src={SleepingRooster}
-            alt="Sleeping Rooster"
-            className={Style["sleeping-rooster"]}
+      {/* Animation container */}
+      <div
+        className={`${Style["sleeping-rooster-container"]} ${
+          hideAnimation ? Style["hidden"] : ""
+        }`}
+      >
+        <video
+          autoPlay
+          muted
+          className={Style["sleeping-rooster"]}
+          key={darkMode ? "dark" : "light"}
+        >
+          <source
+            src={darkMode ? DarkAnimation : LightAnimation}
+            type="video/mp4"
           />
-        </div>
-      )}
+        </video>
+      </div>
 
-      {darkMode && ( // Render the content only if darkMode is enabled
+      {showMainContent && (
         <Box
           component={"main"}
-          className="homepage-content"
+          className={`${contentVisible ? "visible" : "homepage-content"}`}
           display={"flex"}
           flexDirection={{ xs: "column", md: "row" }}
           alignItems={"center"}

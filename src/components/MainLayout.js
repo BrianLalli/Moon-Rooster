@@ -10,7 +10,7 @@ import Resume from "./Resume";
 // import Contact from "./Contact";
 
 export default function MainLayout() {
-  let [darkMode, setDarkMode] = useState(false);
+  let [darkMode, setDarkMode] = useState(true);
 
   function handleClick() {
     setDarkMode(!darkMode);

@@ -8,17 +8,28 @@
   color: $green;
 }
 
+.moonblue {
+  color: $moonblue;
+}
+
 .skills {
   columns: 1;
   @media only screen and (min-width: 940px) {
-    columns: 2;
+    columns: 1;
   }
+  transition: all 0.3s ease;
 
   li {
-    margin: 0;
-    line-height: 1.75;
+    &:hover {
+      transform: translateY(-5px);  /* Bounce effect */
+      background-color: $moonblue;  /* Background color transition */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Text shadow */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Box shadow */
+    }
   }
 }
+
+
 
 @keyframes fadeIn {
   from {
@@ -31,29 +42,11 @@
 
 .fadeIn {
   animation: fadeIn 1s ease;
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-.slideInFromLeft {
-  animation: slideInFromLeft 1s ease-out;
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.hidden {
+  opacity: 0;
 }
 
