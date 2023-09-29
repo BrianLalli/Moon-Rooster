@@ -79,23 +79,32 @@ export default function Home({ darkMode = true, handleDarkModeToggle }) {
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
+    console.log('Dark mode changed:', darkMode);
     setCurrentAnimation(darkMode ? DarkAnimation : LightAnimation);
   }, [darkMode]);
-
+  
   useEffect(() => {
+    console.log('Setting timer to show main content and hide animation');
     const timer = setTimeout(() => {
+      console.log('Timer fired: Showing main content and hiding animation');
       setShowMainContent(true);
       setHideAnimation(true); // Hide the animation
     }, 10000); // Assuming the animation duration is 5000 milliseconds (5 seconds)
-
-    return () => clearTimeout(timer); // Cleanup
+  
+    return () => {
+      console.log('Cleaning up timer');
+      clearTimeout(timer); // Cleanup
+    };
   }, []);
-
+  
   useEffect(() => {
+    console.log('Setting timer to make content visible');
     setTimeout(() => {
+      console.log('Timer fired: Making content visible');
       setContentVisible(true);
     }, 2000); // 2 seconds delay
   }, []);
+  
 
   return (
     <div style={{ position: "relative", height: "100%" }}>

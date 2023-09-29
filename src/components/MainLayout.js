@@ -30,28 +30,17 @@ export default function MainLayout() {
         </Grid>
         <Grid item flexGrow={1}>
           <Routes>
-          <Route exact path={"/brian-lalli-portfolio/"} element={<Home darkMode={darkMode} handleDarkModeToggle={handleClick} />} />
-
             <Route
               exact
-              path={"/brian-lalli-portfolio/about"}
-              element={<About />}
+              path={"/"}
+              element={
+                <Home darkMode={darkMode} handleDarkModeToggle={handleClick} />
+              }
             />
-            <Route
-              exact
-              path={"/brian-lalli-portfolio/portfolio"}
-              element={<Portfolio />}
-            />
-            <Route
-              exact
-              path={"/brian-lalli-portfolio/resume"}
-              element={<Resume />}
-            />
-             <Route
-              exact
-              path={"/brian-lalli-portfolio/contact"}
-              element={<Contact />}
-            />
+            <Route exact path={"/about"} element={<About />} />
+            <Route exact path={"/portfolio"} element={<Portfolio />} />
+            <Route exact path={"/resume"} element={<Resume />} />
+            <Route exact path={"/contact"} element={<Contact />} />
           </Routes>
         </Grid>
 
