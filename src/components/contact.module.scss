@@ -1,0 +1,134 @@
+@import "../variables.modules.scss";
+
+.form-group {
+    display: flex;
+    justify-content: center;
+  }
+
+.formControl {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: 1.2rem;
+    border: 1px solid $dark;
+    border-radius: 5px;
+    padding: 1.375rem .75rem;
+    margin-bottom: 1.5em;
+    height: calc(3.5em + .75rem + 2px);
+    transition: border-color 0.3s ease;
+    width: 100%;  // Combined
+    &[id="message"] {
+        height: 100px; } // Adjust the height as needed
+}
+
+.formControl:focus {
+    border-color: #1c75bc;
+    box-shadow: 0 0 5px #1c75bc;
+}
+
+
+.ac_btn {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    background-color: #1c75bc;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; // Added transform and box-shadow
+    width: 20%;
+    text-align: center;
+    margin: auto;  // Center the button
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);  // Initial shadow
+
+    &:hover {
+        background-color: lighten(#1c75bc, 10%);  // Lighten on hover
+        transform: scale(1.05);  // Slightly enlarge the button
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);  // Increase shadow on hover
+    }
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__form {
+    background: linear-gradient(135deg, #f3f4f6 0%, #1c75bc 150%);
+    background-color: lighten($white, 5%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flexbox;  // Combined
+    flex-direction: column;  // Combined
+    align-items: center;  // Combined
+}
+
+.color_sec {
+    color: $dark;
+    font-weight: 700;
+}
+
+.sec_sp {
+    margin-bottom: 20px;
+}
+
+.contentWrapper {
+    max-width: 800px;
+    margin: auto;
+    padding: 50px;
+}
+
+.centeredContent {
+    margin: 10px;
+    text-align: center; 
+    font-size: large;
+}
+
+.descriptionText {
+    text-align: center;
+    font-size: 1.0rem;
+    padding: 10px;
+}
+
+.emailLink {
+    &:hover {
+      color: blue; // Change to the blue color you prefer
+    }
+  }
+  
+  
+
+  @media (max-width: 992px) {
+    .contentWrapper {
+      padding: 20px 10px;
+    }
+    
+    .formControl {
+      font-size: 1rem;
+      padding: 1rem .5rem;
+    }
+    
+    .ac_btn {
+      width: 100%;
+    }
+    
+    .centeredContent, .descriptionText {
+      font-size: medium;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .centeredContent {
+      text-align: center;
+    }
+    
+    .form-group {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .formControl {
+      width: 100%;
+    }
+  }

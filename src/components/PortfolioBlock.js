@@ -1,8 +1,7 @@
 import React from "react";
 import IconLink from "./IconLink";
 import { Box } from "@mui/material";
-import styles from '../App.module.scss';
-
+import styles from "../App.module.scss";
 
 function PortfolioBlock(props) {
   const { image, live, source, title, description } = props;
@@ -38,13 +37,12 @@ function PortfolioBlock(props) {
           fontSize={"1.5rem"}
           py={"2rem"}
         >
-<Box className={styles['icon-link-box']}>
-  <IconLink link={live} title={"Live Demo"} icon={"fa fa-safari"} />
-</Box>
-<Box className={styles['icon-link-box']}>
-  <IconLink link={source} title={"Source Code"} icon={"fa fa-code"} />
-</Box>
-
+          <Box className={styles["icon-link-box"]}>
+            <IconLink link={live} title={"Live Demo"} icon={"fa fa-safari"} />
+          </Box>
+          <Box className={styles["icon-link-box"]}>
+            <IconLink link={source} title={"Source Code"} icon={"fa fa-code"} />
+          </Box>
         </Box>
       </Box>
     </Box>

@@ -21,7 +21,7 @@ const info = {
   miniBio: [
     {
       emoji: "🧑‍💻",
-      text: "I build and design websites",
+      text: "I develop and design websites",
     },
     {
       emoji: "🤖",

@@ -33,7 +33,7 @@ const info = {
     },
     {
       title: "Fantasy Football Start/Sit",
-      description: "This app uses an algorithm that calculates a player's firepower for each week and predicts who to start.",
+      description: "Fantasy Football Lineup Setter",
       live: "https://ff-start-em-sit-em.vercel.app/",
       source: "https://github.com/BrianLalli/ff-start-em-sit-em",
       image:Project9,

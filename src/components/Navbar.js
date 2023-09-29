@@ -18,7 +18,7 @@ const links = [
   //     active: 'home'
   // },
   {
-    name: "About Me",
+    name: "About",
     to: "/brian-lalli-portfolio/about",
     active: "about",
   },
@@ -32,11 +32,11 @@ const links = [
     to: "/brian-lalli-portfolio/resume",
     active: "resume",
   },
-  // {
-  //     name: 'Contact',
-  //     to: '/brian-lalli-portfolio/contact',
-  //     active: 'contact'
-  // },
+  {
+      name: 'Contact',
+      to: '/brian-lalli-portfolio/contact',
+      active: 'contact'
+  },
 ];
 
 export default function Navbar({ darkMode, handleClick }) {
