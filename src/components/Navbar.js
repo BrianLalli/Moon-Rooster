@@ -9,35 +9,36 @@ const links = [
   {
     name: "mr",
     type: "initials",
-    to: "/brian-lalli-portfolio/",
+    to: "/",
     active: "home",
   },
   // {
   //     name: 'Home',
-  //     to: '/brian-lalli-portfolio/',
+  //     to: '/',
   //     active: 'home'
   // },
   {
     name: "About",
-    to: "/brian-lalli-portfolio/about",
+    to: "/about",
     active: "about",
   },
   {
     name: "Portfolio",
-    to: "/brian-lalli-portfolio/portfolio",
+    to: "/portfolio",
     active: "portfolio",
   },
   {
     name: "Resume",
-    to: "/brian-lalli-portfolio/resume",
+    to: "/resume",
     active: "resume",
   },
   {
-      name: 'Contact',
-      to: '/brian-lalli-portfolio/contact',
-      active: 'contact'
+    name: "Contact",
+    to: "/contact",
+    active: "contact",
   },
 ];
+
 
 export default function Navbar({ darkMode, handleClick }) {
   const location = useLocation();
