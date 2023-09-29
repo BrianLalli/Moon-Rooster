@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import { Box, Grid } from "@mui/material";
 import Resume from "./Resume";
 import Contact from "./Contact";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function MainLayout() {
   let [darkMode, setDarkMode] = useState(false);
@@ -56,6 +57,7 @@ export default function MainLayout() {
           ></Box>
         </Grid>
       </Grid>
+      <Analytics />
     </Box>
   );
 }
