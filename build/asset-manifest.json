@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/brian-lalli-portfolio/static/css/main.b7bbc9bd.css",
+    "main.js": "/brian-lalli-portfolio/static/js/main.9b8e1da2.js",
+    "static/js/787.79c2c88d.chunk.js": "/brian-lalli-portfolio/static/js/787.79c2c88d.chunk.js",
+    "static/media/lightanimation.mp4": "/brian-lalli-portfolio/static/media/lightanimation.719867342e703c5fac26.mp4",
+    "static/media/darkanimation.mp4": "/brian-lalli-portfolio/static/media/darkanimation.e68d89a3f91ee5025161.mp4",
+    "static/media/self.png": "/brian-lalli-portfolio/static/media/self.45f9fe507ec5e1780aae.png",
+    "static/media/MR_Blue.png": "/brian-lalli-portfolio/static/media/MR_Blue.e5ee70cdb6f99e1d94b3.png",
+    "static/media/moonrooster.png": "/brian-lalli-portfolio/static/media/moonrooster.01843f50ead6e710da1f.png",
+    "static/media/Project2.png": "/brian-lalli-portfolio/static/media/Project2.62c1fa5e5058f9b46855.png",
+    "static/media/Project8.png": "/brian-lalli-portfolio/static/media/Project8.c8849e6abd593a5b20e3.png",
+    "static/media/TheJewelLevineFoundation.png": "/brian-lalli-portfolio/static/media/TheJewelLevineFoundation.a4ec80fc0da1b281a538.png",
+    "static/media/Project1.png": "/brian-lalli-portfolio/static/media/Project1.106835f017d247b46973.png",
+    "static/media/resume.pdf": "/brian-lalli-portfolio/static/media/resume.fadca60b8f2734452ef9.pdf",
+    "static/media/Project4.png": "/brian-lalli-portfolio/static/media/Project4.c1351aab61bf695c8384.png",
+    "static/media/Project7.png": "/brian-lalli-portfolio/static/media/Project7.165a55c2a1bb60518218.png",
+    "static/media/Project 5.png": "/brian-lalli-portfolio/static/media/Project 5.b270bc4d1d6b2f7b2468.png",
+    "static/media/Project3.png": "/brian-lalli-portfolio/static/media/Project3.804afd29b755cc3f900f.png",
+    "static/media/FFStartSit.png": "/brian-lalli-portfolio/static/media/FFStartSit.880ea5d251290966cf00.png",
+    "index.html": "/brian-lalli-portfolio/index.html",
+    "main.b7bbc9bd.css.map": "/brian-lalli-portfolio/static/css/main.b7bbc9bd.css.map",
+    "main.9b8e1da2.js.map": "/brian-lalli-portfolio/static/js/main.9b8e1da2.js.map",
+    "787.79c2c88d.chunk.js.map": "/brian-lalli-portfolio/static/js/787.79c2c88d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7bbc9bd.css",
+    "static/js/main.9b8e1da2.js"
+  ]
+}
