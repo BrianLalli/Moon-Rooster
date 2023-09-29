@@ -1,7 +1,7 @@
 {
   "name": "brian-lalli-portfolio",
   "version": "0.1.0",
-  "homepage": "https://brianlalli.github.io/brian-lalli-portfolio/",
+  "homepage": "https://www.moonrooster.com/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
