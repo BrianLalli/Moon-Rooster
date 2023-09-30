@@ -3,6 +3,7 @@ import Style from "./Navbar.module.scss";
 import Toggler from "./Toggler";
 import { Link, useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
 // import DarkModeTooltip from "./DarkModeTool.js";
 
 const links = [
@@ -40,8 +41,7 @@ const links = [
 ];
 
 
-export default function Navbar({ darkMode, handleClick }) {
-  const location = useLocation();
+export default function Navbar({ darkMode, handleClick, toggleDrawer }) {  const location = useLocation();
   const [active, setActive] = useState(
     location.pathname === "/"
       ? "home"
@@ -59,6 +59,7 @@ export default function Navbar({ darkMode, handleClick }) {
         textTransform={"lowercase"}
         fontSize={"1rem"}
       >
+        
         {links.map((link, index) => (
           <Box
             key={index}
