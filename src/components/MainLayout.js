@@ -11,7 +11,7 @@ import Contact from "./Contact";
 import { Analytics } from "@vercel/analytics/react";
 
 export default function MainLayout() {
-  let [darkMode, setDarkMode] = useState(false);
+  let [darkMode, setDarkMode] = useState(true);
 
   function handleClick() {
     setDarkMode(!darkMode);

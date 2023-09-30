@@ -111,11 +111,17 @@ a:hover {
 }
 
 /* New media query for mobile */
+/* New media query for mobile */
 @media (max-width: 768px) {
   .sleeping-rooster {
-    width: 80%;  /* Adjust as needed */
-    height: auto;
-    margin: 0 auto;  /* Center the video */
+    position: fixed;  /* Fixed position */
+    top: 0;  /* Align to the top */
+    left: 0;  /* Align to the left */
+    width: 100vw;  /* Full viewport width */
+    height: 100vh;  /* Full viewport height */
+    z-index: 9999;  /* High z-index to cover other elements */
+    object-fit: cover;  /* Cover the entire viewport */
   }
 }
+
 
