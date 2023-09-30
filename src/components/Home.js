@@ -5,8 +5,8 @@ import classNames from "classnames";
 import { Box } from "@mui/material";
 import EmojiBullet from "./EmojiBullet";
 import SocialIcon from "./SocialIcon";
-import DarkAnimation from "../img/darkanimation.mp4";
-import LightAnimation from "../img/lightanimation.mp4";
+import DarkAnimation from "../img/MR_1440x900_BlackBG.mp4";
+import LightAnimation from "../img/MR_1440x900_WhiteBG.mp4";
 
 let colors = ["#F2F2F2", "#1c75bc"];
 

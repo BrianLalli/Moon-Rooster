@@ -75,10 +75,10 @@ a:hover {
   left: 0;
 }
 
-.sleeping-rooster {
-  width: 600px;
-  margin: 0; // Reset any margins
-}
+// .sleeping-rooster {
+//   width: 600px;
+//   margin: 0; // Reset any margins
+// }
 
 .hidden {
   display: none;
@@ -101,3 +101,21 @@ a:hover {
     transform: rotate(10deg);
   }
 }
+
+/* Existing styles for desktop */
+.sleeping-rooster {
+  width: 100%;
+  height: auto;
+  border: none;
+  outline: none;
+}
+
+/* New media query for mobile */
+@media (max-width: 768px) {
+  .sleeping-rooster {
+    width: 80%;  /* Adjust as needed */
+    height: auto;
+    margin: 0 auto;  /* Center the video */
+  }
+}
+
