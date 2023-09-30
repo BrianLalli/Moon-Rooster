@@ -79,32 +79,43 @@ export default function Home({ darkMode = true, handleDarkModeToggle }) {
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
-    console.log('Dark mode changed:', darkMode);
+    console.log("Dark mode changed:", darkMode);
     setCurrentAnimation(darkMode ? DarkAnimation : LightAnimation);
   }, [darkMode]);
-  
+
   useEffect(() => {
-    console.log('Setting timer to show main content and hide animation');
+    console.log("Setting timer to show main content and hide animation");
     const timer = setTimeout(() => {
-      console.log('Timer fired: Showing main content and hiding animation');
+      console.log("Timer fired: Showing main content and hiding animation");
       setShowMainContent(true);
       setHideAnimation(true); // Hide the animation
     }, 10000); // Assuming the animation duration is 5000 milliseconds (5 seconds)
-  
+
     return () => {
-      console.log('Cleaning up timer');
+      console.log("Cleaning up timer");
       clearTimeout(timer); // Cleanup
     };
   }, []);
-  
+
   useEffect(() => {
-    console.log('Setting timer to make content visible');
+    console.log("Setting timer to make content visible");
     setTimeout(() => {
-      console.log('Timer fired: Making content visible');
+      console.log("Timer fired: Making content visible");
       setContentVisible(true);
     }, 2000); // 2 seconds delay
   }, []);
-  
+
+  useEffect(() => {
+    // Detect if user is on a mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      const videoElement = document.querySelector(
+        `.${Style["sleeping-rooster"]}`
+      );
+      videoElement.setAttribute("controls", "true");
+    }
+  }, []);
 
   return (
     <div style={{ position: "relative", height: "100%" }}>
@@ -117,6 +128,7 @@ export default function Home({ darkMode = true, handleDarkModeToggle }) {
         <video
           autoPlay
           muted
+          playsInline
           className={Style["sleeping-rooster"]}
           key={darkMode ? "dark" : "light"}
         >
