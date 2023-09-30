@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.module.scss';
 import MainLayout from "./components/MainLayout";
-import {BrowserRouter} from "react-router-dom";
-
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
-   return (
-      <div>
-         <BrowserRouter>
-            <MainLayout/>
-         </BrowserRouter>
-      </div>
-   );
-}
+  useEffect(() => {
+    document.title = "Moon Rooster";
+  }, []);
 
+  return (
+    <div>
+      <BrowserRouter>
+        <MainLayout />
+      </BrowserRouter>
+    </div>
+  );
+}
 
 export default App;
