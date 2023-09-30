@@ -106,15 +106,19 @@ export default function Home({ darkMode = true, handleDarkModeToggle }) {
   }, []);
 
   useEffect(() => {
-    // Detect if user is on a mobile device
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const videoElement = document.getElementById("myVideo");
 
-    if (isMobile) {
-      const videoElement = document.querySelector(
-        `.${Style["sleeping-rooster"]}`
-      );
-      videoElement.setAttribute("controls", "true");
-    }
+    const handleVideoEnd = () => {
+      // Hide the video when it ends
+      videoElement.style.display = "none";
+    };
+
+    videoElement.addEventListener("ended", handleVideoEnd);
+
+    return () => {
+      // Cleanup
+      videoElement.removeEventListener("ended", handleVideoEnd);
+    };
   }, []);
 
   return (
@@ -126,6 +130,7 @@ export default function Home({ darkMode = true, handleDarkModeToggle }) {
         }`}
       >
         <video
+          id="myVideo"
           autoPlay
           muted
           playsInline
