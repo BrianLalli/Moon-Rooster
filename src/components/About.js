@@ -24,6 +24,7 @@ const info = {
       "Mobile App Development",
       "E-Commerce Consulting",
       "Data Analysis & Visualization",
+      "Automation"
     ],
   },
   hobbies: [
@@ -88,7 +89,7 @@ export default function About() {
         </p>
         <p className={Style.fadeIn}>{info.bio}</p>
         <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>For those curious about the name, Moon is my dog's name and Rooster is my spirit animal :) </span>{" "}
+          <span style={{ color: info.baseColor }}>For those curious about the name, Moon is my dog's name and Rooster is my spirit animal.</span>{" "}
         </p>
       </>
     );
@@ -118,7 +119,7 @@ export default function About() {
       <>
         <p className={Style.fadeIn}>
           <span style={{ color: info.baseColor }}>
-          Pricing: $125/hr
+          Pricing:
           </span>{" "}
         </p>
         <p className={Style.fadeIn}>

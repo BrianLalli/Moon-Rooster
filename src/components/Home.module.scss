@@ -1,16 +1,18 @@
 @import "../variables.modules";
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
+  margin: 0 auto;
   @media only screen and (min-width: 940px) {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: left;
   }
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 2.5rem;
   text-align: center;
   @media only screen and (min-width: 940px) {
     font-size: 2rem;
@@ -69,11 +71,14 @@ a:hover {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 320px;  // Adjust this value based on the height of your navbar
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
 }
+
 
 // .sleeping-rooster {
 //   width: 600px;
@@ -122,6 +127,92 @@ a:hover {
     object-fit: cover;  /* Cover the entire viewport */
   }
 }
+
+@keyframes zoomInFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in-fade-in {
+  animation: zoomInFadeIn 1s ease-in-out !important;
+}
+
+@keyframes flyIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// Your existing styles
+.who-we-are-card, .what-we-do-card, .why-choose-us-card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px; // new: maximum width
+  margin: 0 auto; // new: center the card
+  animation: flyIn 1s ease-out; // add the animation here
+
+  // Conditional border color based on dark or light mode
+  border: 1px solid #fff; // Default to white border
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid #000; // Change to black border for dark mode
+  }
+
+  // Add margin or padding between bullets
+  margin-bottom: 15px; // You can adjust this value as needed
+
+  // Your existing hover styles, etc.
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-bottom: 20px; // Add some space between cards for mobile view
+    flex-direction: column; // Stacks them on top of each other for mobile view
+  }
+}
+
+.who-we-are-card {
+  animation-delay: 0.3s; // Delay the animation for "Who We Are" card
+}
+
+.what-we-do-card {
+  animation-delay: 1.6s; // Delay the animation for "What We Do" cards
+}
+
+.why-choose-us-card {
+  animation-delay: 3.1s; // Delay the animation for "What We Do" cards
+}
+
+.larger-header {
+  font-size: 2rem; // Adjust as needed
+  text-align: center; // Center the text
+}
+
+.contact-info {
+  list-style: none; // Remove bullet points
+  padding: 0; // Remove any default padding
+  margin: auto;
+}
+
+.contact-item {
+  margin-bottom: 5px; // Add some spacing between contact items
+}
+
+
+
 
 
 

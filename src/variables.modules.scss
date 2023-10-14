@@ -14,3 +14,8 @@ $transition: all 250ms ease;
 .shadowed {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,0.4);
 }
+
+.dark-bg {
+  background-color: $dark;
+  color: $white; // Or any other color for text in dark mode
+}
