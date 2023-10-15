@@ -9,8 +9,6 @@ export default function ContactUs() {
     <Container className={Style.contentWrapper}>
       <Row className="mb-5 mt-3">
         <Col lg="12" className="text-center">
-          {" "}
-          {/* Bootstrap's text-center */}
           <img
             src={logo}
             alt="Your Logo"
@@ -33,15 +31,12 @@ export default function ContactUs() {
       </Row>
       <Row className={Style.sec_sp}>
         <Col lg="5" className="mb-5">
-          {/* <h3 className={Style.centeredContent + " py-4"}>Let's chat!</h3>{" "} */}
-          {/* Centered */}
           <address className={Style.centeredContent}>
-            {" "}
-            {/* Centered */}
             <strong>Email:</strong>{" "}
             <a
               href={`mailto:${contactConfig.YOUR_EMAIL}`}
-              className="emailLink"
+              className={`${Style.emailLink}`}
+              style={{ paddingTop: "0" }} // Use paddingTop to remove top padding
             >
               {contactConfig.YOUR_EMAIL}
             </a>
@@ -70,7 +65,7 @@ export default function ContactUs() {
                   placeholder="Name"
                   type="text"
                   required
-                  style={{ height: "40px" }} // Adjust the height here
+                  style={{ height: "40px" }}
                 />
               </div>
               <div className="form-group" style={{ width: "48%" }}>
@@ -81,7 +76,7 @@ export default function ContactUs() {
                   placeholder="Email"
                   type="email"
                   required
-                  style={{ height: "40px" }} // Adjust the height here
+                  style={{ height: "40px" }}
                 />
               </div>
             </div>
@@ -97,7 +92,10 @@ export default function ContactUs() {
               ></textarea>
             </div>
             <div className={Style.buttonWrapper}>
-              <button className={Style.ac_btn} type="submit">
+              <button
+                className={`${Style.ac_btn} py-2 px-4`} // Add custom styles here
+                type="submit"
+              >
                 Send
               </button>
             </div>

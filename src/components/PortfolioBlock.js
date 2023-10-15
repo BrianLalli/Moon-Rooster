@@ -11,7 +11,7 @@ function PortfolioBlock(props) {
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
-      style={{ height: "400px", marginTop: "70px" }}
+      style={{ height: "400px", marginTop: "100px" }} // Adjusted marginTop
     >
       <Box
         component={"img"}
@@ -19,14 +19,14 @@ function PortfolioBlock(props) {
         alt={"mockup"}
         style={{ height: "300px", width: "400px", objectFit: "cover" }} // Fixed height and width for the image
       />
-      <h1 style={{ fontSize: "2rem", textAlign: "center" }}>{title}</h1>
+<h1 style={{ fontSize: "2rem", textAlign: "center", margin: 0 }}>{title}</h1>
       <Box
         display={"flex"}
         flexDirection={"column"}
         justifyContent={"center"}
         alignItems={"center"}
       >
-        <p style={{ fontSize: "1.5rem", textAlign: "center" }}>{description}</p>
+<p style={{ fontSize: "1.5rem", textAlign: "center", margin: 0 }}>{description}</p>
         <Box
           className={"portfolio"}
           display={"flex"}
@@ -38,10 +38,20 @@ function PortfolioBlock(props) {
           py={"2rem"}
         >
           <Box className={styles["icon-link-box"]}>
-            <IconLink link={live} title={"Live Demo"} icon={"fa fa-safari"} />
+            <IconLink
+              link={live}
+              title={"Live Demo"}
+              icon={"fa fa-safari"}
+              style={{ padding: 0 }} // Add inline style to remove padding
+            />
           </Box>
           <Box className={styles["icon-link-box"]}>
-            <IconLink link={source} title={"Source Code"} icon={"fa fa-code"} />
+            <IconLink
+              link={source}
+              title={"Source Code"}
+              icon={"fa fa-code"}
+              style={{ padding: 0 }} // Add inline style to remove padding
+            />
           </Box>
         </Box>
       </Box>
