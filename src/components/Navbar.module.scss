@@ -4,6 +4,17 @@ nav {
   transition: $transition;
 }
 
+// Mobile Menu Icon
+.menu-icon {
+  display: none; // hide by default
+
+  @media (max-width: 768px) {
+    display: block; // show on small screens
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
+
 .active {
   border-bottom: 5px solid;
   border-image-slice: 1;
@@ -16,4 +27,30 @@ li {
     transform: translateY(-3px);
     transition: $transition;
   }
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(1rem + 1vw);
+  text-transform: lowercase;
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column; // stack vertically on small screens
+    gap: 1rem;
+  }
+}
+
+// ...your existing styles
+
+.mobile-menu {
+  // style your mobile menu here
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; // or whatever background you like
+  color: #000; // or whatever text color you like
 }

@@ -12,10 +12,10 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   @media only screen and (min-width: 768px) {
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: left;
   }
 }
@@ -75,8 +75,8 @@ a:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
+  width: 100%;
+  height: 100vh;
 }
 
 
@@ -209,6 +209,25 @@ a:hover {
 
 .contact-item {
   margin-bottom: 5px; // Add some spacing between contact items
+}
+
+@media (max-width: 768px) {
+  .who-we-are-card, .what-we-do-card, .why-choose-us-card {
+    width: 100%; /* Full width on small screens */
+    padding: 15px; /* Reduced padding */
+    /* ...other styles */
+  }
+}
+
+/* New media query for mobile */
+@media (max-width: 768px) {
+  .sleeping-rooster {
+    /* Your styles for smaller screens */
+    position: relative;  /* You might prefer 'relative' for mobile */
+    width: 100%;  /* Full width */
+    height: 100%;  /* Auto height */
+    /* ...any other adjustments you'd like to make for mobile screens */
+  }
 }
 
 

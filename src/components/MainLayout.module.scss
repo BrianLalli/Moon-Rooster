@@ -1,24 +1,37 @@
 @import "../variables.modules";
 
+.main-layout-container {
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+}
+
+body {
+  overflow-x: hidden; // Prevent horizontal scrolling
+}
+
 footer {
   color: $dark;
+  font-size: calc(1rem + 0.2vw); // Dynamic font size
 }
 
 .dark {
   background-color: $dark;
   color: $white;
   transition: all 400ms;
-  width: 100%;        
+  width: 100%;
+  max-width: 100vw;
   height: 100%;
-  background-size: cover;      // Cover the entire container
-  background-position: center; // Center the image
-  box-sizing: border-box;      // Include padding and border in width/height
-  // overflow: hidden;      
-  
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
 
   a, i, li {
     color: $white;
     transition: color 400ms;
+    font-size: calc(1rem + 0.2vw); // Dynamic font size
   }
 
   a:visited {
@@ -30,18 +43,16 @@ footer {
   }
 }
 
-.light{
+.light {
   background-color: $white;
   color: $dark;
   transition: all 400ms;
-  width: 100%;        
+  width: 100%;
   height: 100vh;
-  background-size: cover;      // Cover the entire container
-  background-position: center; // Center the image
-  box-sizing: border-box;      // Include padding and border in width/height
-  // overflow: hidden;   
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
 }
-
 
 .moon-glow {
   @keyframes glow {
@@ -60,7 +71,10 @@ footer {
 
 @media only screen and (max-width: 768px) {
   footer {
-    font-size: 1.2rem;
+    font-size: calc(1rem + 0.2vw); // Dynamic font size
   }
-  // other mobile-specific styles
+
+  .who-we-are-card, .what-we-do-card, .why-choose-us-card {
+    flex-direction: column; // Stack them on top of each other for mobile view
+  }
 }
