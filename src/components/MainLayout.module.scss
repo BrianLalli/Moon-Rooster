@@ -8,6 +8,12 @@ footer {
   background-color: $dark;
   color: $white;
   transition: all 400ms;
+  width: 100%;        
+  height: 100%;
+  background-size: cover;      // Cover the entire container
+  background-position: center; // Center the image
+  box-sizing: border-box;      // Include padding and border in width/height
+  // overflow: hidden;      
   
 
   a, i, li {
@@ -28,8 +34,13 @@ footer {
   background-color: $white;
   color: $dark;
   transition: all 400ms;
+  width: 100%;        
+  height: 100vh;
+  background-size: cover;      // Cover the entire container
+  background-position: center; // Center the image
+  box-sizing: border-box;      // Include padding and border in width/height
+  // overflow: hidden;   
 }
-
 
 
 .moon-glow {
@@ -47,3 +58,9 @@ footer {
   animation: glow 2s infinite;
 }
 
+@media only screen and (max-width: 768px) {
+  footer {
+    font-size: 1.2rem;
+  }
+  // other mobile-specific styles
+}
