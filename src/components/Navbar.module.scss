@@ -7,6 +7,7 @@ nav {
 // Mobile Menu Icon
 .menu-icon {
   display: none; // hide by default
+  
 
   @media (max-width: 768px) {
     display: block; // show on small screens
@@ -14,6 +15,7 @@ nav {
     cursor: pointer;
   }
 }
+
 
 .active {
   border-bottom: 5px solid;
@@ -43,14 +45,13 @@ ul {
   }
 }
 
-// ...your existing styles
-
-.mobile-menu {
-  // style your mobile menu here
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Add new styles for mobile header container */
+.header-container-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  color: $moonblue; /* Set your text color */
   width: 100%;
-  background-color: #fff; // or whatever background you like
-  color: #000; // or whatever text color you like
 }
+

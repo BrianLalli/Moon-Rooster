@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Style from "./Navbar.module.scss";
 import Toggler from "./Toggler";
-import { Link, useLocation } from "react-router-dom"; // Import Link and useLocation
+import { Link, useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Drawer from "@mui/material/Drawer";
-import { Link as RouterLink } from "react-router-dom"; // Import RouterLink
+import { Link as RouterLink } from "react-router-dom";
 
 const links = [
   {
@@ -18,10 +18,10 @@ const links = [
   },
   {
     name: "home",
-    to: "/home", // Update the "home" link to the root path
+    to: "/home",
     active: "home",
     linkComponent: RouterLink,
-    state: { noAnimation: true }, // Pass the noAnimation state when clicking "home"
+    state: { noAnimation: true },
   },
   {
     name: "About",
@@ -41,7 +41,7 @@ const links = [
 ];
 
 export default function Navbar({ darkMode, handleClick }) {
-  const location = useLocation(); // Use useLocation from the correct import
+  const location = useLocation();
   const [active, setActive] = useState(
     location.pathname === "/"
       ? "home"
@@ -69,74 +69,63 @@ export default function Navbar({ darkMode, handleClick }) {
         fontSize={{ xs: "0.8rem", md: "1rem" }}
       >
         {matches ? (
-          links.map((link, index) => (
-            <Box
-              key={index}
-              component={"li"}
-              className={link.active === active && !link.type && Style.active}
-            >
-              {link.linkComponent ? (
-                // Use linkComponent for the "home" link
-                <link.linkComponent
-                  to={link.to}
-                  onClick={() => {
-                    setActive(link.active); // Update the active state
-                  }}
-                  state={link.state} // Pass the state including noAnimation
-                >
-                  {!link.type && (
-                    <p style={{ paddingBottom: "0.5rem" }}>{link.name}</p>
-                  )}
-                  {link.type && <h1>{link.name}</h1>}
-                </link.linkComponent>
-              ) : (
-                // Use the default Link component for other links
-                <Link
-                  to={link.to}
-                  onClick={() => {
-                    setActive(link.active); // Update the active state
-                  }}
-                >
-                  {!link.type && (
-                    <p style={{ paddingBottom: "0.5rem" }}>{link.name}</p>
-                  )}
-                  {link.type && <h1>{link.name}</h1>}
-                </Link>
-              )}
-            </Box>
-          ))
+          <>
+            {links.map((link, index) => (
+              <Box
+                key={index}
+                component={"li"}
+                className={link.active === active && !link.type && Style.active}
+              >
+                {link.linkComponent ? (
+                  <link.linkComponent
+                    to={link.to}
+                    onClick={() => {
+                      setActive(link.active);
+                    }}
+                    state={link.state}
+                  >
+                    {!link.type && (
+                      <p style={{ paddingBottom: "0.5rem" }}>{link.name}</p>
+                    )}
+                    {link.type && <h1>{link.name}</h1>}
+                  </link.linkComponent>
+                ) : (
+                  <Link
+                    to={link.to}
+                    onClick={() => {
+                      setActive(link.active);
+                    }}
+                  >
+                    {!link.type && (
+                      <p style={{ paddingBottom: "0.5rem" }}>{link.name}</p>
+                    )}
+                    {link.type && <h1>{link.name}</h1>}
+                  </Link>
+                )}
+              </Box>
+            ))}
+            <li style={{ position: "relative" }}>
+              <Toggler darkMode={darkMode} handleClick={handleClick} />
+            </li>
+          </>
         ) : (
-          <MenuIcon className={Style["menu-icon"]} onClick={toggleDrawer} />
+          <div className={Style["header-container-mobile"]}>
+            <MenuIcon className={Style["menu-icon"]} onClick={toggleDrawer} />
+            <Toggler darkMode={darkMode} handleClick={handleClick} />
+          </div>
         )}
-        <li style={{ position: "relative" }}>
-          <Toggler darkMode={darkMode} handleClick={handleClick} />
-        </li>
       </Box>
 
-      {/* Drawer component */}
       <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
         <div style={{ width: 250 }}>
           <ul>
-            <li>
-              <Link to="/home" onClick={() => toggleDrawer()}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" onClick={() => toggleDrawer()}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/portfolio" onClick={() => toggleDrawer()}>
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" onClick={() => toggleDrawer()}>
-                Contact
-              </Link>
-            </li>
+            {links.map((link, index) => (
+              <li key={index}>
+                <Link to={link.to} onClick={() => toggleDrawer()}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </Drawer>
