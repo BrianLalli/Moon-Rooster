@@ -25,21 +25,22 @@ const info = {
   miniBio: [
     {
       emoji: "🧑‍💻",
-      text: "Custom Software Development: Tailored solutions that solve your unique challenges.",
+      text: <span><h4>Custom Software Development:</h4> Tailored solutions that solve your unique challenges.</span>,
     },
     {
-      emoji: "🤖",
-      text: "No-Code & Low-Code Solutions: Speeding up the development process without compromising on quality.",
+      emoji: "⏩",
+      text: <span><h4>No-Code & Low-Code Solutions:</h4> Speeding up the development process without compromising on quality.</span>,
     },
     {
-      emoji: "🌎",
-      text: "Web Design & Development: Clean, modern designs that are both intuitive and conversion-optimized.",
+      emoji: "🎨",
+      text: <span><h4>Web Design & Development:</h4> Clean, modern designs that are both intuitive and conversion-optimized.</span>,
     },
     {
-      emoji: "🌎",
-      text: "AI-Powered Automation: Leverage machine learning algorithms to significantly reduce time spent on repetitive tasks and optimize operational processes.",
+      emoji: "⏳",
+      text: <span><h4>AI-Powered Automation:</h4> Leverage machine learning algorithms to significantly reduce time spent on repetitive tasks and optimize operational processes.</span>,
     },
   ],
+  
   socials: [
     {
       link: "https://facebook.com",
@@ -190,33 +191,34 @@ export default function Home({ darkMode = true, handleDarkModeToggle, noAnimatio
             >
               <div className="text-center">
                 {/* Use this div to group the centered content */}
-                <h1 style={{ textAlign: "center" }}>
+                <h1 style={{ textAlign: "center", fontSize: "2.1rem" }}>
                   Welcome to
                   <span
                     style={{
                       background: info.gradient,
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: darkMode ? "transparent" : "",
+                      fontSize: "2.2rem"
                     }}
                   >
                     {info.firstName}
                   </span>
-                  <span className={Style.hand}>🐓</span>
+                  {/* <span className={Style.hand}>🐓</span> */}
                 </h1>
-                <h2> {info.position}.</h2>
+                <h2 style={{ fontSize: "1.8rem" }}>{info.position}</h2>
               </div>
             </Container>
             <br />
             <h2 className={Style["larger-header"]} style={{ marginTop: "20px" }}>
               Who We Are
             </h2>
-            <div className="cards-container">
+            <div className="who-we-are-section">
               <div className={Style["who-we-are-card"]}>
-                <Box component={"ul"} p={"0.8rem"}>
+                <Box component={"ul"} p={"0.1rem"}>
                   <EmojiBullet
                     key={0}
-                    emoji="🌎"
-                    text="Moon Rooster is an Austin, TX-based software development company specializing in delivering end-to-end solutions for your digital needs."
+                    emoji="🐓"
+                    text="Austin, TX-based Software Development Company: specializing in delivering end-to-end solutions for your digital needs."
                   />
                 </Box>
               </div>
@@ -240,27 +242,25 @@ export default function Home({ darkMode = true, handleDarkModeToggle, noAnimatio
 
             <br />
 
-            <h2 className={Style["larger-header"]}>Why Choose Us?</h2>
+            <h2 className={Style["larger-header"]}>Why Choose Us</h2>
             <Box component={"ul"} p={"0.8rem"}>
               <div className={Style["why-choose-us-card"]}>
                 <EmojiBullet
                   key={1}
-                  emoji="👩‍💻"
-                  text="Local Presence, Global Reach: Based in Austin, but serving clients worldwide."
-                />
+                  emoji="🌎"
+                  text={<span><h4>Local Presence, Global Reach:</h4> Based in Austin, but serving clients worldwide.</span>}                />
               </div>
               <div className={Style["why-choose-us-card"]}>
                 <EmojiBullet
                   key={2}
                   emoji="🌐"
-                  text="Tech-Savvy Team: Leveraging a mixture of coding languages and platforms including HTML, CSS, JS, Python, SQL, and React."
-                />
+                  text={<span><h4>Tech-Savvy Team:</h4> Leveraging a mixture of coding languages and platforms including HTML, CSS, JS, Python, SQL, and React.</span>}                />
               </div>
               <div className={Style["why-choose-us-card"]}>
                 <EmojiBullet
                   key={3}
-                  emoji="🤖"
-                  text="Transparent Pricing: Know what you're paying for with our straightforward pricing models."
+                  emoji="💰"
+                  text={<span><h4>Transparent Pricing:</h4> Know what you're paying for with our straightforward pricing models. </span>}
                 />
               </div>
             </Box>
