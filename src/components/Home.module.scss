@@ -227,10 +227,13 @@ a:hover {
 @media (max-width: 768px) {
   .sleeping-rooster {
     /* Your styles for smaller screens */
-    position: relative;  /* You might prefer 'relative' for mobile */
-    width: 100%;  /* Full width */
-    height: 100%;  /* Auto height */
-    /* ...any other adjustments you'd like to make for mobile screens */
+    position: fixed;  /* Fixed position */
+    top: 0;  /* Align to the top */
+    left: 0;  /* Align to the left */
+    width: 100vw;  /* Full viewport width */
+    height: 100vh;  /* Full viewport height */
+    z-index: 9999;  /* High z-index to cover other elements */
+    object-fit: cover; 
   }
 }
 
