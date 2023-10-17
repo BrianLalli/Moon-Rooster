@@ -191,14 +191,14 @@ export default function Home({ darkMode = true, handleDarkModeToggle, noAnimatio
             >
               <div className="text-center">
                 {/* Use this div to group the centered content */}
-                <h1 style={{ textAlign: "center", fontSize: "2.1rem" }}>
+                <h1 style={{ textAlign: "center", fontSize: "2rem" }}>
                   Welcome to
                   <span
                     style={{
                       background: info.gradient,
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: darkMode ? "transparent" : "",
-                      fontSize: "2.2rem"
+                      fontSize: "2rem"
                     }}
                   >
                     {info.firstName}
