@@ -116,7 +116,7 @@ export default function About() {
             {info.skills.proficientWith.map((proficiency, index) => (
               <li
                 key={index}
-                style={{ marginBottom: "0.5rem", fontSize: "1.3rem" }}
+                style={{ marginBottom: "0.5rem", fontSize: "1.4rem" }}
               >
                 {proficiency}
               </li>
@@ -156,7 +156,7 @@ export default function About() {
           {info.hobbies.map((hobby, index) => (
             <li
               key={index}
-              style={{ marginBottom: "0.5rem", fontSize: "1.3rem" }}
+              style={{ marginBottom: "0.5rem", fontSize: "1.4rem" }}
             >
               <Box component={"span"} mr={"1rem"}>
                 {hobby.emoji}
