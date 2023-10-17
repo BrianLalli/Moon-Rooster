@@ -6,8 +6,8 @@ import classNames from "classnames";
 import { Box } from "@mui/material";
 import EmojiBullet from "./EmojiBullet";
 import SocialIcon from "./SocialIcon";
-import DarkAnimation from "../img/MR_1440x900_BlackBG.mp4";
-import LightAnimation from "../img/MR_1440x900_WhiteBG.mp4";
+import DarkAnimation from "../img/MR_1080x1920_BlackBG 2.mp4";
+import LightAnimation from "../img/MR_1080x1920_WhiteBG 2.mp4";
 import { Container } from "react-bootstrap";
 import { useLocation } from "react-router-dom"; // Import useLocation
 import HomeContent from "./HomeContent";
