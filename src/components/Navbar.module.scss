@@ -7,7 +7,6 @@ nav {
 // Mobile Menu Icon
 .menu-icon {
   display: none; // hide by default
-  
 
   @media (max-width: 768px) {
     display: block; // show on small screens
@@ -53,5 +52,6 @@ ul {
   padding: 0.5rem;
   color: $moonblue; /* Set your text color */
   width: 100%;
+  margin-right: 5%;
 }
 
