@@ -106,6 +106,7 @@ export default function About() {
             <span style={{ color: info.baseColor }}>Services Offered:</span>{" "}
           </p>
           <ul
+            className={`${Style.skillsList} ${Style.aboutList}`} // Add the "aboutList" class here
             style={{
               listStyleType: "none",
               paddingLeft: 0,
@@ -116,7 +117,11 @@ export default function About() {
             {info.skills.proficientWith.map((proficiency, index) => (
               <li
                 key={index}
-                style={{ marginBottom: "0.5rem", fontSize: "1.4rem" }}
+                style={{
+                  marginBottom: "0.5rem",
+                  fontSize: "1.4rem",
+                  transition: "background-color 0.3s ease",
+                }}
               >
                 {proficiency}
               </li>
@@ -136,7 +141,7 @@ export default function About() {
           <span style={{ color: info.baseColor }}>Pricing:</span>{" "}
         </p>
         <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor, }}>
+          <span style={{ color: info.baseColor }}>
             Prior to development, a quote will be provided based on the scope of
             the work and labor hours required.{" "}
             <span className={Style.green}></span>
@@ -146,6 +151,7 @@ export default function About() {
           <span style={{ color: info.baseColor }}>Factors Include:</span>{" "}
         </p>
         <ul
+          className={Style.aboutList} // Add a specific class here
           style={{
             listStyleType: "none",
             paddingLeft: 0,
@@ -156,7 +162,11 @@ export default function About() {
           {info.hobbies.map((hobby, index) => (
             <li
               key={index}
-              style={{ marginBottom: "0.5rem", fontSize: "1.4rem" }}
+              style={{
+                marginBottom: "0.5rem",
+                fontSize: "1.4rem",
+                transition: "background-color 0.3s ease",
+              }}
             >
               <Box component={"span"} mr={"1rem"}>
                 {hobby.emoji}
