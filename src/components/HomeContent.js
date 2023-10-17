@@ -7,6 +7,7 @@ import { Container } from "react-bootstrap";
 import me from "../img/moonrooster.png";
 import { useLocation } from "react-router-dom"; // Import useLocation
 import classNames from "classnames";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 let colors = ["#F2F2F2", "#1c75bc"];
 
@@ -66,10 +67,9 @@ const info = {
 };
 
 const HomeContent = ({ darkMode = true }) => {
-    const location = useLocation(); // Use useLocation to access location state
-  
+  const location = useLocation(); // Use useLocation to access location state
 
-return (
+  return (
     <div>
       {/* Content without animation */}
       <Box
@@ -147,11 +147,7 @@ return (
             <Box component={"ul"} p={"0.8rem"}>
               {info.miniBio.map((bio, index) => (
                 <div className={Style["what-we-do-card"]}>
-                  <EmojiBullet
-                    key={index}
-                    emoji={bio.emoji}
-                    text={bio.text}
-                  />
+                  <EmojiBullet key={index} emoji={bio.emoji} text={bio.text} />
                 </div>
               ))}
             </Box>
@@ -186,30 +182,32 @@ return (
 
           <br />
 
-          <Box
-            display={"flex"}
-            gap={"1.5rem"}
-            justifyContent={"center"}
-            fontSize={{ xs: "2rem", md: "2.5rem" }}
-          >
-            {info.socials.map((social, index) => (
-              <SocialIcon
-                key={index}
-                link={social.link}
-                icon={social.icon}
-                label={social.label}
-              />
-            ))}
-          </Box>
-
-          <footer className={Style["contact-footer"]}>
-            <div className={Style["contact-info"]}>
+          <footer className={Style["home-content-contact-footer"]}>
+            <div className={Style["contact-info"]} style={{ textAlign: "center" }}>
               <div className={Style["contact-item"]}>
                 <EmojiBullet emoji="📧" text="moonroosterdesigns@gmail.com" />
               </div>
               <div className={Style["contact-item"]}>
                 <EmojiBullet emoji="📱" text="737-346-7797" />
               </div>
+
+              {/* Apply the style directly to the wrapping <Box> */}
+              <Box
+                display={"flex"}
+                gap={"1.5rem"}
+                justifyContent={"center"}
+                fontSize={{ xs: "2rem", md: "2.5rem" }}
+                style={{ textAlign: "center" }}
+              >
+                {info.socials.map((social, index) => (
+                  <SocialIcon
+                    key={index}
+                    link={social.link}
+                    icon={social.icon}
+                    label={social.label}
+                  />
+                ))}
+              </Box>
             </div>
           </footer>
         </Box>

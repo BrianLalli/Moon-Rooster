@@ -267,7 +267,17 @@ export default function Home({ darkMode = true, handleDarkModeToggle, noAnimatio
 
             <br />
 
-            <Box
+            
+
+            <footer className={Style["contact-footer"]}>
+              <div className={Style["contact-info"]}>
+                <div className={Style["contact-item"]}>
+                  <EmojiBullet emoji="📧" text="moonroosterdesigns@gmail.com" />
+                </div>
+                <div className={Style["contact-item"]}>
+                  <EmojiBullet emoji="📱" text="737-346-7797" />
+                </div>
+                <Box
               display={"flex"}
               gap={"1.5rem"}
               justifyContent={"center"}
@@ -282,15 +292,6 @@ export default function Home({ darkMode = true, handleDarkModeToggle, noAnimatio
                 />
               ))}
             </Box>
-
-            <footer className={Style["contact-footer"]}>
-              <div className={Style["contact-info"]}>
-                <div className={Style["contact-item"]}>
-                  <EmojiBullet emoji="📧" text="moonroosterdesigns@gmail.com" />
-                </div>
-                <div className={Style["contact-item"]}>
-                  <EmojiBullet emoji="📱" text="737-346-7797" />
-                </div>
               </div>
             </footer>
           </Box>

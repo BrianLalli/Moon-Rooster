@@ -211,10 +211,6 @@ a:hover {
   margin-bottom: 5px; // Add some spacing between contact items
 }
 
-.contact-footer {
-  text-align: center; /* Center the text horizontally */
-}
-
 @media (max-width: 768px) {
   .who-we-are-card, .what-we-do-card, .why-choose-us-card {
     width: 100%; /* Full width on small screens */
@@ -233,6 +229,13 @@ a:hover {
     /* ...any other adjustments you'd like to make for mobile screens */
   }
 }
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add any other styling you need */
+  }
 
 
 
