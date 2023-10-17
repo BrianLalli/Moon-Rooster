@@ -9,6 +9,7 @@ import { Box, Grid } from "@mui/material";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import { Analytics } from "@vercel/analytics/react";
+import HomeContent from "./HomeContent";
 
 export default function MainLayout() {
   let [darkMode, setDarkMode] = useState(true);
@@ -18,7 +19,9 @@ export default function MainLayout() {
   }
 
   return (
-    <div className={Style['main-layout-container']}> {/* New wrapper div */}
+    <div className={Style["main-layout-container"]}>
+      {" "}
+      {/* New wrapper div */}
       <Box className={darkMode ? Style.dark : Style.light}>
         <Grid
           container
@@ -36,9 +39,24 @@ export default function MainLayout() {
                 exact
                 path={"/"}
                 element={
-                  <Home darkMode={darkMode} handleDarkModeToggle={handleClick} />
+                  <Home
+                    darkMode={darkMode}
+                    handleDarkModeToggle={handleClick}
+                  />
                 }
               />
+              <Route
+                exact
+                path={"/home"}
+                element={
+                  <HomeContent
+                    darkMode={darkMode}
+                    handleDarkModeToggle={handleClick}
+                    noAnimation={true} // This is where you pass the noAnimation prop
+                  />
+                }
+              />
+
               <Route exact path={"/about"} element={<About />} />
               <Route exact path={"/portfolio"} element={<Portfolio />} />
               <Route exact path={"/resume"} element={<Resume />} />

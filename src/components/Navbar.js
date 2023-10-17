@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Style from "./Navbar.module.scss";
 import Toggler from "./Toggler";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // Import Link and useLocation
 import { Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Drawer from "@mui/material/Drawer"; // Import Drawer
+import Drawer from "@mui/material/Drawer";
+import { Link as RouterLink } from "react-router-dom"; // Import RouterLink
 
 const links = [
   {
@@ -14,6 +15,13 @@ const links = [
     type: "initials",
     to: "/",
     active: "home",
+  },
+  {
+    name: "home",
+    to: "/home", // Update the "home" link to the root path
+    active: "home",
+    linkComponent: RouterLink,
+    state: { noAnimation: true }, // Pass the noAnimation state when clicking "home"
   },
   {
     name: "About",
@@ -26,11 +34,6 @@ const links = [
     active: "portfolio",
   },
   {
-    name: "Resume",
-    to: "/resume",
-    active: "resume",
-  },
-  {
     name: "Contact",
     to: "/contact",
     active: "contact",
@@ -38,7 +41,7 @@ const links = [
 ];
 
 export default function Navbar({ darkMode, handleClick }) {
-  const location = useLocation();
+  const location = useLocation(); // Use useLocation from the correct import
   const [active, setActive] = useState(
     location.pathname === "/"
       ? "home"
@@ -72,17 +75,34 @@ export default function Navbar({ darkMode, handleClick }) {
               component={"li"}
               className={link.active === active && !link.type && Style.active}
             >
-              <Link
-                to={link.to}
-                onClick={() => {
-                  setActive(link.active);
-                }}
-              >
-                {!link.type && (
-                  <p style={{ paddingBottom: "0.5rem" }}>{link.name}</p>
-                )}
-                {link.type && <h1>{link.name}</h1>}
-              </Link>
+              {link.linkComponent ? (
+                // Use linkComponent for the "home" link
+                <link.linkComponent
+                  to={link.to}
+                  onClick={() => {
+                    setActive(link.active); // Update the active state
+                  }}
+                  state={link.state} // Pass the state including noAnimation
+                >
+                  {!link.type && (
+                    <p style={{ paddingBottom: "0.5rem" }}>{link.name}</p>
+                  )}
+                  {link.type && <h1>{link.name}</h1>}
+                </link.linkComponent>
+              ) : (
+                // Use the default Link component for other links
+                <Link
+                  to={link.to}
+                  onClick={() => {
+                    setActive(link.active); // Update the active state
+                  }}
+                >
+                  {!link.type && (
+                    <p style={{ paddingBottom: "0.5rem" }}>{link.name}</p>
+                  )}
+                  {link.type && <h1>{link.name}</h1>}
+                </Link>
+              )}
             </Box>
           ))
         ) : (
@@ -94,22 +114,22 @@ export default function Navbar({ darkMode, handleClick }) {
       </Box>
 
       {/* Drawer component */}
-      <Drawer
-        anchor="right"
-        open={isDrawerOpen}
-        onClose={toggleDrawer}
-      >
+      <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
         <div style={{ width: 250 }}>
           <ul>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/" onClick={() => toggleDrawer()}>
+                Home
+              </Link>
             </li>
-            <li>
-              <Link to="/portfolio">Portfolio</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
+            {links
+              .map((link, index) => (
+                <li key={index}>
+                  <Link to={link.to} onClick={() => toggleDrawer()}>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
       </Drawer>

@@ -9,6 +9,8 @@ import SocialIcon from "./SocialIcon";
 import DarkAnimation from "../img/MR_1440x900_BlackBG.mp4";
 import LightAnimation from "../img/MR_1440x900_WhiteBG.mp4";
 import { Container } from "react-bootstrap";
+import { useLocation } from "react-router-dom"; // Import useLocation
+import HomeContent from "./HomeContent";
 
 let colors = ["#F2F2F2", "#1c75bc"];
 
@@ -67,7 +69,7 @@ const info = {
   ],
 };
 
-export default function Home({ darkMode = true, handleDarkModeToggle }) {
+export default function Home({ darkMode = true, handleDarkModeToggle, noAnimation }) {
   const [showMainContent, setShowMainContent] = useState(false);
   const [hideAnimation, setHideAnimation] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState(
@@ -75,6 +77,8 @@ export default function Home({ darkMode = true, handleDarkModeToggle }) {
   );
 
   const [contentVisible, setContentVisible] = useState(false);
+
+  const location = useLocation(); // Use useLocation to access location state
 
   useEffect(() => {
     console.log("Dark mode changed:", darkMode);
@@ -87,7 +91,7 @@ export default function Home({ darkMode = true, handleDarkModeToggle }) {
       console.log("Timer fired: Showing main content and hiding animation");
       setShowMainContent(true);
       setHideAnimation(true); // Hide the animation
-    }, 10000); // Assuming the animation duration is 5000 milliseconds (5 seconds)
+    }, 10000); // Assuming the animation duration is 10000 milliseconds (10 seconds)
 
     return () => {
       console.log("Cleaning up timer");
@@ -118,6 +122,11 @@ export default function Home({ darkMode = true, handleDarkModeToggle }) {
       videoElement.removeEventListener("ended", handleVideoEnd);
     };
   }, []);
+
+  // Check if the noAnimation prop is set and prevent the animation
+  if (noAnimation) {
+    return <HomeContent darkMode={darkMode} />; // Render the HomeContent component
+  }
 
   return (
     <div style={{ position: "relative", height: "100%", textAlign: "center" }}>
@@ -178,11 +187,8 @@ export default function Home({ darkMode = true, handleDarkModeToggle }) {
               className={`zoom-in-fade-in d-flex align-items-center justify-content-center p-5 rounded ${
                 darkMode ? "dark-bg" : "bg-light"
               }`}
-
-              // style={{ minHeight: "100vh" }} // This ensures it takes the full height
             >
               <div className="text-center">
-                {" "}
                 {/* Use this div to group the centered content */}
                 <h1 style={{ textAlign: "center" }}>
                   Welcome to
@@ -200,12 +206,8 @@ export default function Home({ darkMode = true, handleDarkModeToggle }) {
                 <h2> {info.position}.</h2>
               </div>
             </Container>
-
             <br />
-            <h2
-              className={Style["larger-header"]}
-              style={{ marginTop: "20px" }}
-            >
+            <h2 className={Style["larger-header"]} style={{ marginTop: "20px" }}>
               Who We Are
             </h2>
             <div className="cards-container">
