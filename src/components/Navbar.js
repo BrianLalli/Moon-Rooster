@@ -118,18 +118,25 @@ export default function Navbar({ darkMode, handleClick }) {
         <div style={{ width: 250 }}>
           <ul>
             <li>
-              <Link to="/" onClick={() => toggleDrawer()}>
+              <Link to="/home" onClick={() => toggleDrawer()}>
                 Home
               </Link>
             </li>
-            {links
-              .map((link, index) => (
-                <li key={index}>
-                  <Link to={link.to} onClick={() => toggleDrawer()}>
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+            <li>
+              <Link to="/about" onClick={() => toggleDrawer()}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/portfolio" onClick={() => toggleDrawer()}>
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={() => toggleDrawer()}>
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
       </Drawer>

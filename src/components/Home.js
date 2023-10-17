@@ -267,8 +267,6 @@ export default function Home({ darkMode = true, handleDarkModeToggle, noAnimatio
 
             <br />
 
-            
-
             <footer className={Style["contact-footer"]}>
               <div className={Style["contact-info"]}>
                 <div className={Style["contact-item"]}>
