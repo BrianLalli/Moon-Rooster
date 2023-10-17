@@ -12,23 +12,39 @@
   color: $moonblue;
 }
 
-.skills {
-  columns: 1;
-  @media only screen and (min-width: 940px) {
-    columns: 1;
-  }
-  transition: all 0.3s ease;
+.skills-column {
+  // display: flex !important;
+  flex-direction: column !important;
+  text-align: left !important;
+  font-size: 1.2rem !important;
+}
 
-  li {
-    &:hover {
-      transform: translateY(-5px);  /* Bounce effect */
-      background-color: $moonblue;  /* Background color transition */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Text shadow */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Box shadow */
-    }
+.skills-column li {
+  &:hover {
+    display: block !important;
+    transform: translateY(-5px) !important;
+    background-color: $moonblue !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    font-size: 1.5rem;
   }
 }
 
+
+li:hover {
+  background-color: $moonblue;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .skills-column {
+    flex-direction: column !important;
+  }
+}
 
 
 @keyframes fadeIn {

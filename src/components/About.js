@@ -24,7 +24,7 @@ const info = {
       "Mobile App Development",
       "E-Commerce Consulting",
       "Data Analysis & Visualization",
-      "Automation"
+      "Automation",
     ],
   },
   hobbies: [
@@ -89,7 +89,10 @@ export default function About() {
         </p>
         <p className={Style.fadeIn}>{info.bio}</p>
         <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>For those curious about the name, Moon is my dog's name and Rooster is my spirit animal.</span>{" "}
+          <span style={{ color: info.baseColor }}>
+            For those curious about the name, Moon is my dog's name and Rooster
+            is my spirit animal.
+          </span>{" "}
         </p>
       </>
     );
@@ -102,9 +105,21 @@ export default function About() {
           <p>
             <span style={{ color: info.baseColor }}>Services Offered:</span>{" "}
           </p>
-          <ul className={Style.skills}>
+          <ul
+            style={{
+              listStyleType: "none",
+              paddingLeft: 0,
+              textAlign: "left",
+              display: "block",
+            }}
+          >
             {info.skills.proficientWith.map((proficiency, index) => (
-              <li key={index}>{proficiency}</li>
+              <li
+                key={index}
+                style={{ marginBottom: "0.5rem", fontSize: "1.3rem" }}
+              >
+                {proficiency}
+              </li>
             ))}
           </ul>
 
@@ -118,24 +133,31 @@ export default function About() {
     return (
       <>
         <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>
-          Pricing:
+          <span style={{ color: info.baseColor }}>Pricing:</span>{" "}
+        </p>
+        <p className={Style.fadeIn}>
+          <span style={{ color: info.baseColor, }}>
+            Prior to development, a quote will be provided based on the scope of
+            the work and labor hours required.{" "}
+            <span className={Style.green}></span>
           </span>{" "}
         </p>
         <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>
-            Prior to development, a quote will be provided based on the scope of the work and labor hours
-            required. <span className={Style.green}></span>
-          </span>{" "}
+          <span style={{ color: info.baseColor }}>Factors Include:</span>{" "}
         </p>
-        <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>
-          Factors Include:
-          </span>{" "}
-        </p>
-        <ul className={Style.skills}>
+        <ul
+          style={{
+            listStyleType: "none",
+            paddingLeft: 0,
+            textAlign: "left",
+            display: "block",
+          }}
+        >
           {info.hobbies.map((hobby, index) => (
-            <li key={index}>
+            <li
+              key={index}
+              style={{ marginBottom: "0.5rem", fontSize: "1.3rem" }}
+            >
               <Box component={"span"} mr={"1rem"}>
                 {hobby.emoji}
               </Box>
