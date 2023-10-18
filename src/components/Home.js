@@ -27,7 +27,7 @@ const info = {
       emoji: "🌙🐓",
       text: (
         <span>
-          <h4>Austin, TX-based Software Development Company:</h4> Specializing
+          <h4>Scranton, PA-based Software Development Company:</h4> Specializing
           in delivering end-to-end solutions for your digital needs.
         </span>
       ),
@@ -66,6 +66,14 @@ const info = {
           <h4>AI-Powered Automation:</h4> Leverage machine learning algorithms
           to significantly reduce time spent on repetitive tasks and optimize
           operational processes.
+        </span>
+      ),
+    },
+    {
+      emoji: "📈",
+      text: (
+        <span>
+          <h4>Data Analysis & Visualization:</h4> Unleash the power of big data to uncover actionable insights in easy to understand charts. 
         </span>
       ),
     },
@@ -246,6 +254,7 @@ export default function Home({
                 <h2 style={{ fontSize: "1.7rem" }}>{info.position}</h2>
               </div>
             </Container>
+            <br />
             <br />
             <h2
               className={Style["larger-header"]}

@@ -175,6 +175,7 @@ a:hover {
   // Your existing hover styles, etc.
   &:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: $moonblue;
   }
 
   @media (max-width: 768px) {

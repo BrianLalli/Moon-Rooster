@@ -30,19 +30,33 @@ li {
   }
 }
 
-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: calc(1rem + 1vw);
-  text-transform: lowercase;
-  font-size: 1rem;
+.ul-container {
+  height: 100px; // Set a fixed height for desktop
 
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc(1rem + 1vw);
+    // text-transform: lowercase;
+    font-size: 1rem;
+  
+    &:hover {
+      background-color: #1c75bc !important;
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column; // stack vertically on small screens
+      gap: 1rem;
+    }
+  }
+  
   @media (max-width: 768px) {
-    flex-direction: column; // stack vertically on small screens
-    gap: 1rem;
+    height: auto; // Reset to auto for mobile screens
   }
 }
+
+
 
 /* Add new styles for mobile header container */
 .header-container-mobile {

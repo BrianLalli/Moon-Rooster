@@ -76,6 +76,7 @@ footer {
   }
 
   .who-we-are-card, .what-we-do-card, .why-choose-us-card {
-    flex-direction: column; // Stack them on top of each other for mobile view
+    flex-direction: column;
+    text-align: center; // Stack them on top of each other for mobile view
   }
 }

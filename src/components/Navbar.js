@@ -11,13 +11,13 @@ import { Link as RouterLink } from "react-router-dom";
 
 const links = [
   {
-    name: "mr",
+    name: "MR",
     type: "initials",
     to: "/",
     active: "home",
   },
   {
-    name: "home",
+    name: "Home",
     to: "/home",
     active: "home",
     linkComponent: RouterLink,
@@ -65,6 +65,7 @@ export default function Navbar({ darkMode, handleClick }) {
         justifyContent={"center"}
         alignItems={"center"}
         gap={{ xs: "1rem", md: "8rem" }}
+        textTransform={"lowercase"}
         fontSize={{ xs: "0.8rem", md: "1rem" }}
       >
         {matches ? (
