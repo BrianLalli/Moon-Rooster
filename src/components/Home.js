@@ -73,8 +73,9 @@ const info = {
       emoji: "📈",
       text: (
         <span>
-          <h4>Data Analysis & Visualization:</h4> Unleash the power of big data
-          to uncover actionable insights in easy to understand charts.
+          <h4>Data Analysis & Visualization:</h4> Unlock the transformative
+          potential of big data to reveal actionable insights through
+          easy-to-understand visualizations.
         </span>
       ),
     },
@@ -123,6 +124,11 @@ export default function Home({
   const [contentVisible, setContentVisible] = useState(false);
 
   // const location = useLocation(); // Use useLocation to access location state
+
+  useEffect(() => {
+    const video = document.getElementById("myVideo");
+    video.play();
+  }, []);
 
   useEffect(() => {
     console.log("Dark mode changed:", darkMode);
@@ -304,7 +310,7 @@ export default function Home({
                   emoji="🌎"
                   text={
                     <span>
-                      <h4>Local Presence, Global Reach:</h4> Based in Austin,
+                      <h4>Local Presence, Global Reach:</h4> Based in Scranton,
                       but serving clients worldwide.
                     </span>
                   }
