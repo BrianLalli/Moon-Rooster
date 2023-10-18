@@ -65,7 +65,6 @@ export default function Navbar({ darkMode, handleClick }) {
         justifyContent={"center"}
         alignItems={"center"}
         gap={{ xs: "1rem", md: "8rem" }}
-        textTransform={"lowercase"}
         fontSize={{ xs: "0.8rem", md: "1rem" }}
       >
         {matches ? (

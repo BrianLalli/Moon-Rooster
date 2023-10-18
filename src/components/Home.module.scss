@@ -237,6 +237,18 @@ a:hover {
   }
 }
 
+// ... Existing styles
+
+.welcome-header {
+  @media (max-width: 768px) {
+    white-space: nowrap !important;  // Prevent text from wrapping into the next line
+    overflow: hidden !important;     // Hide overflow
+    text-overflow: ellipsis !important; // Add ellipsis if the text overflows
+  }
+}
+
+
+
 
 
 

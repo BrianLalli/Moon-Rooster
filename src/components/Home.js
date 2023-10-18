@@ -24,23 +24,53 @@ const info = {
   baseColor: colors[0],
   miniBio: [
     {
+      emoji: "🌙🐓",
+      text: (
+        <span>
+          <h4>Austin, TX-based Software Development Company:</h4> Specializing
+          in delivering end-to-end solutions for your digital needs.
+        </span>
+      ),
+    },
+    {
       emoji: "🧑‍💻",
-      text: <span><h4>Custom Software Development:</h4> Tailored solutions that solve your unique challenges.</span>,
+      text: (
+        <span>
+          <h4>Custom Software Development:</h4> Tailored solutions that solve
+          your unique challenges.
+        </span>
+      ),
     },
     {
       emoji: "⏩",
-      text: <span><h4>No-Code & Low-Code Solutions:</h4> Speeding up the development process without compromising on quality.</span>,
+      text: (
+        <span>
+          <h4>No-Code & Low-Code Solutions:</h4> Speeding up the development
+          process without compromising on quality.
+        </span>
+      ),
     },
     {
       emoji: "🎨",
-      text: <span><h4>Web Design & Development:</h4> Clean, modern designs that are both intuitive and conversion-optimized.</span>,
+      text: (
+        <span>
+          <h4>Web Design & Development:</h4> Clean, modern designs that are both
+          intuitive and conversion-optimized.
+        </span>
+      ),
     },
     {
       emoji: "⏳",
-      text: <span><h4>AI-Powered Automation:</h4> Leverage machine learning algorithms to significantly reduce time spent on repetitive tasks and optimize operational processes.</span>,
+      text: (
+        <span>
+          <h4>AI-Powered Automation:</h4> Leverage machine learning algorithms
+          to significantly reduce time spent on repetitive tasks and optimize
+          operational processes.
+        </span>
+      ),
     },
   ],
-  
+
   socials: [
     {
       link: "https://facebook.com",
@@ -70,7 +100,11 @@ const info = {
   ],
 };
 
-export default function Home({ darkMode = true, handleDarkModeToggle, noAnimation }) {
+export default function Home({
+  darkMode = true,
+  handleDarkModeToggle,
+  noAnimation,
+}) {
   const [showMainContent, setShowMainContent] = useState(false);
   const [hideAnimation, setHideAnimation] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState(
@@ -79,7 +113,7 @@ export default function Home({ darkMode = true, handleDarkModeToggle, noAnimatio
 
   const [contentVisible, setContentVisible] = useState(false);
 
-  const location = useLocation(); // Use useLocation to access location state
+  // const location = useLocation(); // Use useLocation to access location state
 
   useEffect(() => {
     console.log("Dark mode changed:", darkMode);
@@ -185,58 +219,68 @@ export default function Home({ darkMode = true, handleDarkModeToggle, noAnimatio
           <Box>
             <Container
               fluid
-              className={`zoom-in-fade-in d-flex align-items-center justify-content-center p-5 rounded ${
+              className={`zoom-in-fade-in d-flex align-items-center justify-content-center p-3 mt-2 rounded ${
                 darkMode ? "dark-bg" : "bg-light"
               }`}
             >
               <div className="text-center">
                 {/* Use this div to group the centered content */}
-                <h1 style={{ textAlign: "center", fontSize: "2rem" }}>
+                <h1
+                  className="welcome-header"
+                  style={{ textAlign: "center", fontSize: "2rem" }}
+                >
+                  {" "}
                   Welcome to
                   <span
                     style={{
                       background: info.gradient,
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: darkMode ? "transparent" : "",
-                      fontSize: "2rem"
+                      fontSize: "2rem",
                     }}
                   >
                     {info.firstName}
                   </span>
                   {/* <span className={Style.hand}>🐓</span> */}
                 </h1>
-                <h2 style={{ fontSize: "1.8rem" }}>{info.position}</h2>
+                <h2 style={{ fontSize: "1.7rem" }}>{info.position}</h2>
               </div>
             </Container>
             <br />
-            <h2 className={Style["larger-header"]} style={{ marginTop: "20px" }}>
+            <h2
+              className={Style["larger-header"]}
+              style={{ marginTop: "20px" }}
+            >
               Who We Are
             </h2>
             <div className="who-we-are-section">
-              <div className={Style["who-we-are-card"]}>
-                <Box component={"ul"} p={"0.1rem"}>
+              <Box component={"ul"} p={"0.8rem"}>
+                <div className={Style["who-we-are-card"]}>
                   <EmojiBullet
                     key={0}
-                    emoji="🐓"
-                    text="Austin, TX-based Software Development Company: specializing in delivering end-to-end solutions for your digital needs."
+                    emoji={info.miniBio[0].emoji}
+                    text={info.miniBio[0].text}
                   />
-                </Box>
-              </div>
+                </div>
+              </Box>
             </div>
             <br />
 
             <div className={Style["what-we-do-section"]}>
               <h2 className={Style["larger-header"]}>What We Do</h2>
               <Box component={"ul"} p={"0.8rem"}>
-                {info.miniBio.map((bio, index) => (
-                  <div className={Style["what-we-do-card"]}>
-                    <EmojiBullet
-                      key={index}
-                      emoji={bio.emoji}
-                      text={bio.text}
-                    />
-                  </div>
-                ))}
+                {info.miniBio.map(
+                  (bio, index) =>
+                    index !== 0 && (
+                      <div className={Style["what-we-do-card"]}>
+                        <EmojiBullet
+                          key={index}
+                          emoji={bio.emoji}
+                          text={bio.text}
+                        />
+                      </div>
+                    )
+                )}
               </Box>
             </div>
 
@@ -248,19 +292,37 @@ export default function Home({ darkMode = true, handleDarkModeToggle, noAnimatio
                 <EmojiBullet
                   key={1}
                   emoji="🌎"
-                  text={<span><h4>Local Presence, Global Reach:</h4> Based in Austin, but serving clients worldwide.</span>}                />
+                  text={
+                    <span>
+                      <h4>Local Presence, Global Reach:</h4> Based in Austin,
+                      but serving clients worldwide.
+                    </span>
+                  }
+                />
               </div>
               <div className={Style["why-choose-us-card"]}>
                 <EmojiBullet
                   key={2}
                   emoji="🌐"
-                  text={<span><h4>Tech-Savvy Team:</h4> Leveraging a mixture of coding languages and platforms including HTML, CSS, JS, Python, SQL, and React.</span>}                />
+                  text={
+                    <span>
+                      <h4>Tech-Savvy Team:</h4> Leveraging a mixture of coding
+                      languages and platforms including: HTML, CSS, JS, Python,
+                      SQL, React, WordPress, Squarespace, Shopify, Wix, and ChatGPT.
+                    </span>
+                  }
+                />
               </div>
               <div className={Style["why-choose-us-card"]}>
                 <EmojiBullet
                   key={3}
                   emoji="💰"
-                  text={<span><h4>Transparent Pricing:</h4> Know what you're paying for with our straightforward pricing models. </span>}
+                  text={
+                    <span>
+                      <h4>Transparent Pricing:</h4> Know what you're paying for
+                      with our straightforward pricing models.
+                    </span>
+                  }
                 />
               </div>
             </Box>
@@ -276,20 +338,20 @@ export default function Home({ darkMode = true, handleDarkModeToggle, noAnimatio
                   <EmojiBullet emoji="📱" text="737-346-7797" />
                 </div>
                 <Box
-              display={"flex"}
-              gap={"1.5rem"}
-              justifyContent={"center"}
-              fontSize={{ xs: "2rem", md: "2.5rem" }}
-            >
-              {info.socials.map((social, index) => (
-                <SocialIcon
-                  key={index}
-                  link={social.link}
-                  icon={social.icon}
-                  label={social.label}
-                />
-              ))}
-            </Box>
+                  display={"flex"}
+                  gap={"1.5rem"}
+                  justifyContent={"center"}
+                  fontSize={{ xs: "2rem", md: "2.5rem" }}
+                >
+                  {info.socials.map((social, index) => (
+                    <SocialIcon
+                      key={index}
+                      link={social.link}
+                      icon={social.icon}
+                      label={social.label}
+                    />
+                  ))}
+                </Box>
               </div>
             </footer>
           </Box>
