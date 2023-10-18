@@ -39,7 +39,7 @@ const info = {
       image:Project9,
     },
     {
-      title: "oogl",
+      title: "Oogl",
       description: "Logo Guessing Game",
       live: "https://ooglapp.godaddysites.com/",
       source: "https://github.com/BrianLalli/Logo-Guessing-Game",
@@ -75,7 +75,7 @@ const info = {
     },
     {
       title: "React Bucket List",
-      description: "Users can add bucket list items and set priority",
+      description: "Bucket List Item Tracker",
       live: "https://brianlalli.github.io/bucket-list/",
       source: "https://github.com/BrianLalli/bucket-list",
       image: Project3,
