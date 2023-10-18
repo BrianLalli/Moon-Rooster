@@ -73,7 +73,8 @@ const info = {
       emoji: "📈",
       text: (
         <span>
-          <h4>Data Analysis & Visualization:</h4> Unleash the power of big data to uncover actionable insights in easy to understand charts. 
+          <h4>Data Analysis & Visualization:</h4> Unleash the power of big data
+          to uncover actionable insights in easy to understand charts.
         </span>
       ),
     },
@@ -317,7 +318,8 @@ export default function Home({
                     <span>
                       <h4>Tech-Savvy Team:</h4> Leveraging a mixture of coding
                       languages and platforms including: HTML, CSS, JS, Python,
-                      SQL, React, WordPress, Squarespace, Shopify, Wix, and ChatGPT.
+                      SQL, React, WordPress, Squarespace, Shopify, Wix, and
+                      ChatGPT.
                     </span>
                   }
                 />
@@ -361,6 +363,9 @@ export default function Home({
                     />
                   ))}
                 </Box>
+              </div>
+              <div className={Style["copyright-section"]}>
+                © 2023 Moon Rooster LLC. All Rights Reserved.
               </div>
             </footer>
           </Box>
