@@ -92,8 +92,7 @@ export default function About() {
         <p className={Style.fadeIn}>{info.bio}</p>
         <p className={Style.fadeIn}>
           <span style={{ color: info.baseColor }}>
-            For those curious about the name, Moon is my dog's name and Rooster
-            is my spirit animal.
+          Discover the origin of our name, Moon Rooster, by watching this video.
           </span>
         </p>
         <video controls style={{ width: "100%" }}>
