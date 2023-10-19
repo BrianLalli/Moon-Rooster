@@ -27,7 +27,7 @@ const info = {
       emoji: "🌙🐓",
       text: (
         <span>
-          <h4>Scranton, PA-based Software Development Company:</h4> Specializing
+          <h4>Austin, TX-based Software Development Company:</h4> Specializing
           in delivering end-to-end solutions for your digital needs.
         </span>
       ),
@@ -310,7 +310,7 @@ export default function Home({
                   emoji="🌎"
                   text={
                     <span>
-                      <h4>Local Presence, Global Reach:</h4> Based in Scranton,
+                      <h4>Local Presence, Global Reach:</h4> Based in Austin,
                       but serving clients worldwide.
                     </span>
                   }
@@ -349,16 +349,17 @@ export default function Home({
             <footer className={Style["contact-footer"]}>
               <div className={Style["contact-info"]}>
                 <div className={Style["contact-item"]}>
-                  <EmojiBullet emoji="📧" text="moonroosterdesigns@gmail.com" />
+                  <EmojiBullet  text="moonroosterdesigns@gmail.com" />
                 </div>
                 <div className={Style["contact-item"]}>
-                  <EmojiBullet emoji="📱" text="737-346-7797" />
+                  <EmojiBullet  text="737-346-7797" />
                 </div>
                 <Box
                   display={"flex"}
                   gap={"1.5rem"}
                   justifyContent={"center"}
                   fontSize={{ xs: "2rem", md: "2.5rem" }}
+                  margin={"10px"}  // Added this line
                 >
                   {info.socials.map((social, index) => (
                     <SocialIcon
@@ -371,6 +372,8 @@ export default function Home({
                 </Box>
               </div>
               <div className={Style["copyright-section"]}>
+                <a href="/terms-of-use">Terms of Use</a>
+                <a href="/privacy-policy">Privacy Policy</a>
                 © 2023 Moon Rooster LLC. All Rights Reserved.
               </div>
             </footer>

@@ -217,10 +217,16 @@ a:hover {
 }
 
 .copyright-section {
-  font-size: 14px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  font-size: 1rem;
+  margin-top: 20px;  /* Increased margin-top */
+  margin-bottom: 20px;  /* Increased margin-bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items if you like, or remove this line */
+  gap: 10px;  /* Added gap for internal spacing */
 }
+
+
 
 
 @media (max-width: 768px) {

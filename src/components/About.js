@@ -16,7 +16,7 @@ const info = {
   selfPortrait: "moonrooster",
   gradient: `-webkit-linear-gradient(135deg, ${colors})`,
   baseColor: "#61DBFB",
-  bio: "Hello, World! I'm Brian Lalli & I'm the Founder/Lead Developer at Moon Rooster. I am passionate about developing and designing websites and applications that make life simpler! I have 6 years of combined experience in E-Commerce, Data Analytics, and Software Development at companies like Amazon, Whole Foods Market, & Anheuser-Busch InBev.",
+  bio: "Hello, World! I'm Brian Lalli & I'm the Founder/Lead Developer at Moon Rooster. I have 6 years of combined experience in E-Commerce, Data Analytics, and Software Development at companies like Amazon, Whole Foods Market, & Anheuser-Busch InBev.",
   skills: {
     proficientWith: [
       "Website Development",

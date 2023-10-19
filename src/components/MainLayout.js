@@ -10,6 +10,9 @@ import Resume from "./Resume";
 import Contact from "./Contact";
 import { Analytics } from "@vercel/analytics/react";
 import HomeContent from "./HomeContent";
+import TermsOfUse from "./TermsOfUse"; // Adjust the path to where your TermsOfUse.js file is located
+import PrivacyPolicy from './PrivacyPolicy';  // Adjust the path as needed
+
 
 export default function MainLayout() {
   let [darkMode, setDarkMode] = useState(true);
@@ -61,6 +64,8 @@ export default function MainLayout() {
               <Route exact path={"/portfolio"} element={<Portfolio />} />
               <Route exact path={"/resume"} element={<Resume />} />
               <Route exact path={"/contact"} element={<Contact />} />
+              <Route path="/terms-of-use" element={<TermsOfUse />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Routes>
           </Grid>
 
@@ -73,7 +78,8 @@ export default function MainLayout() {
               py={"1.5rem"}
               sx={{ opacity: 0.7 }}
               width={"100%"}
-            ></Box>
+            >
+            </Box>
           </Grid>
         </Grid>
         <Analytics />
