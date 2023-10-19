@@ -9,7 +9,7 @@ const PrivacyPolicy = ({ darkMode }) => {
     borderRadius: "8px",
     backgroundColor: darkMode ? "#232323" : "#f8f8f8", // Background changes based on mode
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-    maxWidth: "70%",
+    maxWidth: "80%",
     height: "100%", // Set height to 100%
     textAlign: "center", // Center the text
   };
@@ -76,12 +76,15 @@ const PrivacyPolicy = ({ darkMode }) => {
 
       <h2 style={h2Style}>Contact Us</h2>
       <p style={pStyle}>
-  For any questions or concerns about this Privacy Policy, please contact us at:
-  <a href="mailto:moonroosterdesigns@gmail.com" style={{ fontSize: '0.8rem' }}>
-    moonroosterdesigns@gmail.com
-  </a>
-</p>
-
+        For any questions or concerns about this Privacy Policy, please contact
+        us at:
+        <a
+          href="mailto:moonroosterdesigns@gmail.com"
+          style={{ fontSize: "0.8rem" }}
+        >
+          moonroosterdesigns@gmail.com
+        </a>
+      </p>
     </div>
   );
 };

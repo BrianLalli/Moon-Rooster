@@ -10,7 +10,7 @@ console.log("Current Dark Mode:", darkMode);
     borderRadius: "8px",
     backgroundColor: darkMode ? "#232323" : "#f8f8f8", // Background changes based on mode
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-    maxWidth: "70%",
+    maxWidth: "80%",
     height: "100%", // Set height to 100%
     textAlign: "center", // Center the text
   };
