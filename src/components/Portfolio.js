@@ -11,6 +11,7 @@ import Project6 from "../img/TheJewelLevineFoundation.png";
 import Project7 from "../img/Project7.png";
 import Project8 from "../img/Project8.png";
 import Project9 from "../img/FFStartSit.png"
+// import SimpleFooter from "../components/SimpleFooter"
 
 let colors = ["#F2F2F2", "#1c75bc"];
 

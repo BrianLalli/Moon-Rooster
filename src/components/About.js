@@ -4,7 +4,9 @@ import Terminal from "./Terminal";
 import { Box } from "@mui/material";
 import ScrollTrigger from "react-scroll-trigger";
 import me from "../img/self.png";
+// import SimpleFooter from './SimpleFooter';
 // import {info} from "../../info/Info";
+import nameVideo from "../img/nameVideo.mp4";
 
 let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
 
@@ -92,8 +94,12 @@ export default function About() {
           <span style={{ color: info.baseColor }}>
             For those curious about the name, Moon is my dog's name and Rooster
             is my spirit animal.
-          </span>{" "}
+          </span>
         </p>
+        <video controls style={{ width: "100%" }}>
+          <source src={nameVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </>
     );
   }
@@ -189,6 +195,7 @@ export default function About() {
       <Terminal text={aboutMeText()} />
       <Terminal text={skillsText()} />
       <Terminal text={miscText()} />
+      {/* <SimpleFooter />  */}
     </Box>
   );
 }
