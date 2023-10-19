@@ -11,7 +11,7 @@ function PortfolioBlock(props) {
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
-      style={{ height: "400px", marginTop: "140px" }} // Adjusted marginTop
+      style={{ height: "400px", marginTop: "100px", marginBottom: "40px" }} // Adjusted marginTop
     >
       <Box
         component={"img"}

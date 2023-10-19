@@ -4,7 +4,7 @@ import Terminal from "./Terminal";
 import { Box } from "@mui/material";
 import ScrollTrigger from "react-scroll-trigger";
 import me from "../img/self.png";
-// import SimpleFooter from './SimpleFooter';
+import SimpleFooter from './SimpleFooter';
 // import {info} from "../../info/Info";
 import nameVideo from "../img/nameVideo.mp4";
 
@@ -194,7 +194,7 @@ export default function About() {
       <Terminal text={aboutMeText()} />
       <Terminal text={skillsText()} />
       <Terminal text={miscText()} />
-      {/* <SimpleFooter />  */}
+      <SimpleFooter /> 
     </Box>
   );
 }
