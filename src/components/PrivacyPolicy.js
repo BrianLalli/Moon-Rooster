@@ -76,14 +76,8 @@ const PrivacyPolicy = ({ darkMode }) => {
 
       <h2 style={h2Style}>Contact Us</h2>
       <p style={pStyle}>
-        For any questions or concerns about this Privacy Policy, please contact
-        us at:
-        <a
-          href="mailto:moonroosterdesigns@gmail.com"
-          style={{ fontSize: "0.8rem" }}
-        >
-          moonroosterdesigns@gmail.com
-        </a>
+        For any questions about these Terms, please contact us at
+        moonroosterdesigns@gmail.com.
       </p>
     </div>
   );
