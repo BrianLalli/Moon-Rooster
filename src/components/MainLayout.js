@@ -64,9 +64,8 @@ export default function MainLayout() {
               <Route exact path={"/portfolio"} element={<Portfolio />} />
               <Route exact path={"/resume"} element={<Resume />} />
               <Route exact path={"/contact"} element={<Contact />} />
-              <Route path="/terms-of-use" element={<TermsOfUse />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            </Routes>
+              <Route path="/terms-of-use" element={<TermsOfUse darkMode={darkMode} />} />
+              <Route exact path={"/privacy-policy"} element={<PrivacyPolicy darkMode={darkMode} />} /> {/* This line here */}            </Routes>
           </Grid>
 
           <Grid item>
