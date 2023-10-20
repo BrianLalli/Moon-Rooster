@@ -103,7 +103,7 @@ const info = {
       label: "linkedin",
     },
     {
-      link: "https://www.linkedin.com/in/brianlalli11/",
+      link: "https://twitter.com/moonroosterllc",
       icon: "fa fa-twitter",
       label: "twitter",
     },
