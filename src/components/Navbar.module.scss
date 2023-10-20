@@ -23,6 +23,7 @@ nav {
 
 li {
   transition: $transition;
+  font-size: 2rem;
 
   &:hover {
     transform: translateY(-3px);
