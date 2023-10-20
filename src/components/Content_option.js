@@ -1,5 +1,5 @@
 const contactConfig = {
-    YOUR_EMAIL: 'moonroosterdesigns@gmail.com',  // Replace with your actual email
+    YOUR_EMAIL: 'brian@moonrooster.com',  // Replace with your actual email
     YOUR_FONE: '737-346-7797',  // Replace with your actual phone number
     description:
       'Feel free to reach out to me for any inquiries or collaborations.',
