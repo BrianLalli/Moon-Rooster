@@ -74,7 +74,7 @@ console.log("Current Dark Mode:", darkMode);
   
       <h2 style={h2Style}>Limitation of Liability</h2>
       <p style={pStyle}>
-        To the maximum extent permitted by applicable law, [Your Company Name]
+        To the maximum extent permitted by applicable law, Moon Rooster LLC
         shall not be liable for any direct, indirect, punitive, incidental, or
         other consequential damages arising out of or in connection with the use
         of our Service.
@@ -95,7 +95,7 @@ console.log("Current Dark Mode:", darkMode);
   
       <h2 style={h2Style}>Contact Information</h2>
       <p style={pStyle}>
-        For any questions about these Terms, please contact us at moonroosterdesigns@gmail.com.
+        For any questions about these Terms, please contact us at brian@moonrooster.com.
       </p>
     </div>
   );

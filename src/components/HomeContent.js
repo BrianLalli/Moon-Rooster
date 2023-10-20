@@ -79,12 +79,12 @@ const info = {
 
   socials: [
     {
-      link: "https://facebook.com",
+      link: "https://www.facebook.com/MoonRoosterLLC",
       icon: "fa fa-facebook",
       label: "facebook",
     },
     {
-      link: "https://instagram.com",
+      link: "https://www.instagram.com/moonrooster.llc/",
       icon: "fa fa-instagram",
       label: "instagram",
     },
@@ -99,7 +99,7 @@ const info = {
       label: "linkedin",
     },
     {
-      link: "https://twitter.com/brianlalli11",
+      link: "https://twitter.com/moonroosterllc",
       icon: "fa fa-twitter",
       label: "twitter",
     },
@@ -256,7 +256,7 @@ const HomeContent = ({ darkMode = true }) => {
           <footer className={Style["contact-footer"]}>
             <div className={Style["contact-info"]}>
               <div className={Style["contact-item"]}>
-                <EmojiBullet text="moonroosterdesigns@gmail.com" />
+                <EmojiBullet text="brian@moonrooster.com" />
               </div>
               <div className={Style["contact-item"]}>
                 <EmojiBullet text="737-346-7797" />

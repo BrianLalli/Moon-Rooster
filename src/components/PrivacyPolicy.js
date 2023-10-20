@@ -77,7 +77,7 @@ const PrivacyPolicy = ({ darkMode }) => {
       <h2 style={h2Style}>Contact Us</h2>
       <p style={pStyle}>
         For any questions about these Terms, please contact us at
-        moonroosterdesigns@gmail.com.
+        brian@moonrooster.com.
       </p>
     </div>
   );
