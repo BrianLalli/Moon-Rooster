@@ -141,48 +141,51 @@ export default function About() {
 
   function miscText() {
     return (
-      <>
-        <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>Pricing:</span>{" "}
-        </p>
-        <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>
-            Prior to development, a quote will be provided based on the scope of
-            the work and labor hours required.{" "}
-            <span className={Style.green}></span>
-          </span>{" "}
-        </p>
-        <p className={Style.fadeIn}>
-          <span style={{ color: info.baseColor }}>Factors Include:</span>{" "}
-        </p>
-        <ul
-          className={Style.aboutList} // Add a specific class here
-          style={{
-            listStyleType: "none",
-            paddingLeft: 0,
-            textAlign: "left",
-            display: "block",
-          }}
-        >
-          {info.hobbies.map((hobby, index) => (
-            <li
-              key={index}
-              style={{
-                marginBottom: "0.5rem",
-                fontSize: "1.4rem",
-                transition: "background-color 0.3s ease",
-              }}
-            >
-              <Box component={"span"} mr={"1rem"}>
-                {hobby.emoji}
-              </Box>
-              {hobby.label}
-            </li>
-          ))}
-        </ul>
-      </>
+      <ScrollTrigger onEnter={() => setFadeIn(true)}>
+        <div className={fadeIn ? Style.fadeIn : Style.hidden}>
+          <p className={Style.fadeIn}>
+            <span style={{ color: info.baseColor }}>Pricing:</span>{" "}
+          </p>
+          <p className={Style.fadeIn}>
+            <span style={{ color: info.baseColor }}>
+              Prior to development, a quote will be provided based on the scope of
+              the work and labor hours required.{" "}
+              <span className={Style.green}></span>
+            </span>{" "}
+          </p>
+          <p className={Style.fadeIn}>
+            <span style={{ color: info.baseColor }}>Factors Include:</span>{" "}
+          </p>
+          <ul
+            className={Style.aboutList} // Add a specific class here
+            style={{
+              listStyleType: "none",
+              paddingLeft: 0,
+              textAlign: "left",
+              display: "block",
+            }}
+          >
+            {info.hobbies.map((hobby, index) => (
+              <li
+                key={index}
+                style={{
+                  marginBottom: "0.5rem",
+                  fontSize: "1.4rem",
+                  transition: "background-color 0.3s ease",
+                }}
+              >
+                <Box component={"span"} mr={"1rem"}>
+                  {hobby.emoji}
+                </Box>
+                {hobby.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </ScrollTrigger>
     );
   }
+  
 
   return (
     <Box
