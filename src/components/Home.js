@@ -304,7 +304,7 @@ export default function Home({
 
             <h2 className={Style["larger-header"]}>Why Choose Us</h2>
             <Box component={"ul"} p={"0.8rem"}>
-              <div className={Style["zoom-in-fade-in why-choose-us-card"]}>
+              <div className={Style["why-choose-us-card"]}>
                 <EmojiBullet
                   key={1}
                   emoji="🌎"

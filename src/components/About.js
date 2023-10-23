@@ -4,7 +4,7 @@ import Terminal from "./Terminal";
 import { Box } from "@mui/material";
 import ScrollTrigger from "react-scroll-trigger";
 import me from "../img/self.png";
-import SimpleFooter from './SimpleFooter';
+import SimpleFooter from "./SimpleFooter";
 // import {info} from "../../info/Info";
 import nameVideo from "../img/nameVideo.mp4";
 
@@ -92,7 +92,8 @@ export default function About() {
         <p className={Style.fadeIn}>{info.bio}</p>
         <p className={Style.fadeIn}>
           <span style={{ color: info.baseColor }}>
-          Discover the origin of our name, Moon Rooster, by watching this video.
+            Discover the origin of our name, Moon Rooster, by watching this
+            video.
           </span>
         </p>
         <video controls style={{ width: "100%" }}>
@@ -141,23 +142,28 @@ export default function About() {
 
   function miscText() {
     return (
-      <ScrollTrigger onEnter={() => setFadeIn(true)}>
+      <ScrollTrigger
+        onEnter={() => {
+          console.log("Entered viewport!"); 
+          setFadeIn(true);
+        }}
+      >
         <div className={fadeIn ? Style.fadeIn : Style.hidden}>
-          <p className={Style.fadeIn}>
+          <p>
             <span style={{ color: info.baseColor }}>Pricing:</span>{" "}
           </p>
-          <p className={Style.fadeIn}>
+          <p>
             <span style={{ color: info.baseColor }}>
-              Prior to development, a quote will be provided based on the scope of
-              the work and labor hours required.{" "}
+              Prior to development, a quote will be provided based on the scope
+              of the work and labor hours required.{" "}
               <span className={Style.green}></span>
             </span>{" "}
           </p>
-          <p className={Style.fadeIn}>
+          <p>
             <span style={{ color: info.baseColor }}>Factors Include:</span>{" "}
           </p>
           <ul
-            className={Style.aboutList} // Add a specific class here
+            className={Style.aboutList} 
             style={{
               listStyleType: "none",
               paddingLeft: 0,
@@ -197,7 +203,7 @@ export default function About() {
       <Terminal text={aboutMeText()} />
       <Terminal text={skillsText()} />
       <Terminal text={miscText()} />
-      <SimpleFooter /> 
+      <SimpleFooter />
     </Box>
   );
 }
