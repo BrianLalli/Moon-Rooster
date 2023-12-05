@@ -11,6 +11,7 @@ import Project6 from "../img/TheJewelLevineFoundation.png";
 import Project7 from "../img/Project7.png";
 import Project8 from "../img/Project8.png";
 import Project9 from "../img/FFStartSit.png"
+import Project10 from "../img/Natu.Health.png"
 import SimpleFooter from "../components/SimpleFooter"
 
 let colors = ["#F2F2F2", "#1c75bc"];
@@ -19,12 +20,19 @@ const info = {
   firstName: "Brian",
   lastName: "Lalli",
   initials: "bl", // the example uses first and last, but feel free to use three or more if you like.
-  position: "a Program Manager",
+  position: "a Software Engineer",
   selfPortrait: "self", // don't change this unless you want to name your self-portrait in the "img" folder something else!
   gradient: `-webkit-linear-gradient(135deg, ${colors})`, // don't change this either
   baseColor: colors[0],
   portfolio: [
     // This is where your portfolio projects will be detailed
+    {
+      title: "Natu.Health",
+      description: "ZocDoc for Alternative Medicine Practitioners",
+      live: "https://natu-health.vercel.app/",
+      source: "https://github.com/BrianLalli/Natu.Health",
+      image:Project10,
+    },
     {
       title: "The Jewel Levine Foundation",
       description: "Charity Foundation Website",
