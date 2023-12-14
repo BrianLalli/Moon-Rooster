@@ -24,13 +24,19 @@ export default function ContactUs() {
             />
             <h1
               className="display-4 mb-4"
-              style={{ textAlign: "center", fontSize: "2.5rem" }}
+              style={{
+                textAlign: "center",
+                fontSize: "2.5rem",
+                fontWeight: "bold",
+              }}
             >
               Contact Me
             </h1>
+
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
+
         <Row className={Style.sec_sp}>
           <Col lg="5" className="mb-5">
             <address className={Style.centeredContent}>
@@ -38,7 +44,7 @@ export default function ContactUs() {
               <a
                 href={`mailto:${contactConfig.YOUR_EMAIL}`}
                 className={`${Style.emailLink}`}
-                style={{ paddingTop: "0" }} // Use paddingTop to remove top padding
+                style={{ paddingTop: "0" }}
               >
                 {contactConfig.YOUR_EMAIL}
               </a>
@@ -55,7 +61,11 @@ export default function ContactUs() {
             <p className={Style.descriptionText}>{contactConfig.description}</p>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
-            <form className={Style.contact__form + " w-100"}>
+            <form
+              action="https://formspree.io/f/mqkrzzzz"
+              method="POST"
+              className={Style.contact__form + " w-100"}
+            >
               <div
                 style={{ display: "flex", justifyContent: "center", gap: "4%" }}
               >
@@ -74,7 +84,7 @@ export default function ContactUs() {
                   <input
                     className={Style.formControl}
                     id="email"
-                    name="email"
+                    name="_replyto"
                     placeholder="Email"
                     type="email"
                     required
@@ -101,12 +111,19 @@ export default function ContactUs() {
                   style={{
                     width: "100%",
                     maxWidth: "200px",
-                    backgroundColor: "#1c75bc", // Replace with the actual hex code
+                    backgroundColor: "#1c75bc",
                     color: "white",
-                    borderRadius: "10px",
+                    borderRadius: "25px",
+                    transition: "background-color 0.3s ease-in-out",
                   }}
                   className={`py-2 px-4`}
                   type="submit"
+                  onMouseOver={(e) =>
+                    (e.target.style.backgroundColor = "#155b9c")
+                  }
+                  onMouseOut={(e) =>
+                    (e.target.style.backgroundColor = "#1c75bc")
+                  }
                 >
                   Send
                 </button>
@@ -114,8 +131,83 @@ export default function ContactUs() {
             </form>
           </Col>
         </Row>
+
+        <Row className="justify-content-center">
+          <Col lg="6" className="mt-5">
+            <div id="mc_embed_shell" className="text-center">
+              <form
+                action="https://moonrooster.us21.list-manage.com/subscribe/post?u=50b7dd5e8c304cee87f6bfe8d&id=5ba4358a2f&f_id=0048f0e6f0"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                className="validate"
+                target="_blank"
+              >
+                <h2 style={{ textAlign: "center" }}>
+                  Subscribe to our Newsletter
+                </h2>
+                <div className="form-group">
+                  <label htmlFor="mce-EMAIL">Email Address *</label>
+                  <input
+                    type="email"
+                    name="EMAIL"
+                    className="form-control"
+                    id="mce-EMAIL"
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="mce-FNAME">First Name</label>
+                  <input
+                    type="text"
+                    name="FNAME"
+                    className="form-control"
+                    id="mce-FNAME"
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="mce-LNAME">Last Name</label>
+                  <input
+                    type="text"
+                    name="LNAME"
+                    className="form-control"
+                    id="mce-LNAME"
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="mce-PHONE">Phone Number</label>
+                  <input
+                    type="text"
+                    name="PHONE"
+                    className="form-control"
+                    id="mce-PHONE"
+                  />
+                </div>
+                <input
+                  type="submit"
+                  value="Subscribe"
+                  name="subscribe"
+                  className="btn btn-primary mt-3"
+                  id="mc-embedded-subscribe"
+                  style={{
+                    backgroundColor: "#1c75bc",
+                    borderRadius: "25px",
+                    transition: "background-color 0.3s ease-in-out",
+                  }}
+                  onMouseOver={(e) =>
+                    (e.target.style.backgroundColor = "#155b9c")
+                  }
+                  onMouseOut={(e) =>
+                    (e.target.style.backgroundColor = "#1c75bc")
+                  }
+                />
+              </form>
+            </div>
+          </Col>
+        </Row>
+
+        <SimpleFooter />
       </Container>
-      <SimpleFooter />
     </div>
   );
 }
