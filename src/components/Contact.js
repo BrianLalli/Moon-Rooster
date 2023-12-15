@@ -4,10 +4,20 @@ import { contactConfig } from "./Content_option";
 import Style from "./contact.module.scss";
 import logo from "../img/MR_Blue.png";
 import SimpleFooter from "../components/SimpleFooter";
+import { Helmet } from "react-helmet";
 
 export default function ContactUs() {
   return (
     <div>
+      <Helmet>
+        <title>
+          Contact Us | Get in Touch with Moon Rooster LLC in Scranton
+        </title>
+        <meta
+          name="description"
+          content="Reach out to Moon Rooster LLC for expert web design and software development services in Scranton, PA. Contact us today for a consultation or project inquiries."
+        />
+      </Helmet>
       <Container className={Style.contentWrapper}>
         <Row className="mb-5 mt-3">
           <Col lg="12" className="text-center">
@@ -70,6 +80,7 @@ export default function ContactUs() {
                 style={{ display: "flex", justifyContent: "center", gap: "4%" }}
               >
                 <div className="form-group" style={{ width: "48%" }}>
+                  <label htmlFor="name">Name</label>
                   <input
                     className={Style.formControl}
                     id="name"
@@ -81,6 +92,7 @@ export default function ContactUs() {
                   />
                 </div>
                 <div className="form-group" style={{ width: "48%" }}>
+                  <label htmlFor="email">Email</label>
                   <input
                     className={Style.formControl}
                     id="email"
@@ -94,6 +106,7 @@ export default function ContactUs() {
               </div>
 
               <div className="form-group">
+                <label htmlFor="message">Message</label>
                 <textarea
                   className={Style.formControl}
                   id="message"

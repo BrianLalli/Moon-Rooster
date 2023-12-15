@@ -7,6 +7,7 @@ import me from "../img/self.png";
 import SimpleFooter from "./SimpleFooter";
 // import {info} from "../../info/Info";
 import nameVideo from "../img/nameVideo.mp4";
+import { Helmet } from 'react-helmet';
 
 let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
 
@@ -18,15 +19,16 @@ const info = {
   selfPortrait: "moonrooster",
   gradient: `-webkit-linear-gradient(135deg, ${colors})`,
   baseColor: "#61DBFB",
-  bio: "Hello, World! I'm Brian Lalli & I'm the Founder/Lead Developer at Moon Rooster. I have 6 years of combined experience in E-Commerce, Data Analytics, and Software Development at companies like Amazon, Whole Foods Market, & Anheuser-Busch InBev.",
+  bio: "Hello, World! I'm Brian Lalli & I'm the Founder/Lead Developer at Moon Rooster. I have 8 years of combined experience in E-Commerce, Data Analytics, and Software Development at companies like Amazon, Whole Foods Market, & Anheuser-Busch InBev.",
   skills: {
     proficientWith: [
-      "Website Development",
-      "Website Design",
-      "Mobile App Development",
-      "E-Commerce Consulting",
-      "Data Analysis & Visualization",
-      "Automation",
+      "👨🏼‍💻 Custom Software Solutions",
+      "🔎 SEO Optimized Website Development",
+      "🤳 Responsive Website Design",
+      "📱 iOS/Android Mobile App Development",
+      "💸 E-Commerce Consulting",
+      "📊 Data Analysis & Visualization",
+      "🤖 Automation & Machine Learning",
     ],
   },
   hobbies: [
@@ -65,6 +67,16 @@ export default function About() {
     return (
       <>
         <div className={Style.imageContainer}>
+          <Helmet>
+            <title>
+              About Moon Rooster LLC | Expert Web & Software Developers in
+              Scranton
+            </title>
+            <meta
+              name="description"
+              content="Learn more about Moon Rooster LLC, a premier provider of web design and software development in Scranton, PA, dedicated to delivering exceptional digital solutions."
+            />
+          </Helmet>
           <div
             className={Style.imageWrapper}
             style={{
@@ -144,7 +156,7 @@ export default function About() {
     return (
       <ScrollTrigger
         onEnter={() => {
-          console.log("Entered viewport!"); 
+          console.log("Entered viewport!");
           setFadeIn(true);
         }}
       >
@@ -154,16 +166,15 @@ export default function About() {
           </p>
           <p>
             <span style={{ color: info.baseColor }}>
-              Prior to development, a quote will be provided based on the scope
-              of the work and labor hours required.{" "}
-              <span className={Style.green}></span>
-            </span>{" "}
+              We'll provide a quote based on the scope of work and labor hours
+              required before starting development.
+            </span>
           </p>
           <p>
             <span style={{ color: info.baseColor }}>Factors Include:</span>{" "}
           </p>
           <ul
-            className={Style.aboutList} 
+            className={Style.aboutList}
             style={{
               listStyleType: "none",
               paddingLeft: 0,
@@ -191,7 +202,6 @@ export default function About() {
       </ScrollTrigger>
     );
   }
-  
 
   return (
     <Box

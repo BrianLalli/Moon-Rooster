@@ -8,6 +8,8 @@ import me from "../img/moonrooster.png";
 import { useLocation } from "react-router-dom"; // Import useLocation
 import classNames from "classnames";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Helmet } from "react-helmet";
+
 
 let colors = ["#F2F2F2", "#1c75bc"];
 
@@ -111,6 +113,17 @@ const HomeContent = ({ darkMode = true }) => {
 
   return (
     <div>
+            <Helmet>
+        <title>
+          Moon Rooster LLC | Leading Web Design & Software Development in
+          Scranton, PA
+        </title>
+        <meta
+          name="description"
+          content="At Moon Rooster LLC, we excel in delivering top-notch web design and custom software development services tailored for businesses in Scranton, PA. Discover our commitment to transforming innovative business ideas into impactful digital realities."
+        />
+        {/* Add other meta tags as needed */}
+      </Helmet>
       {/* Content without animation */}
       <Box
         component={"main"}

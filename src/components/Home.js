@@ -11,14 +11,15 @@ import LightAnimation from "../img/MR_1080x1920_WhiteBG 2.mp4";
 import { Container } from "react-bootstrap";
 import { useLocation } from "react-router-dom"; // Import useLocation
 import HomeContent from "./HomeContent";
+import { Helmet } from "react-helmet";
 
 let colors = ["#F2F2F2", "#1c75bc"];
 
 const info = {
-  firstName: " Moon Rooster",
+  firstName: " Moon Rooster LLC",
   lastName: "Lalli",
   initials: "mr",
-  position: "Your One-Stop Software Development Partner",
+  position: "Your One-Stop Web Design & Software Development Partner",
   selfPortrait: "moonrooster",
   gradient: `-webkit-linear-gradient(135deg, ${colors})`,
   baseColor: colors[0],
@@ -27,8 +28,12 @@ const info = {
       emoji: "🌙🐓",
       text: (
         <span>
-          <h4>Austin, TX-based Software Development Company:</h4> Specializing
-          in delivering end-to-end solutions for your digital needs.
+          <h4>Premier Web Design & Software Development in Scranton, PA</h4>
+          At Moon Rooster, we excel in delivering top-notch web design and
+          custom software development services tailored for businesses in
+          Scranton, PA. Our dedicated team is committed to transforming your
+          innovative business ideas into impactful digital realities, ensuring a
+          robust online presence and streamlined digital operations.
         </span>
       ),
     },
@@ -36,17 +41,8 @@ const info = {
       emoji: "🧑‍💻",
       text: (
         <span>
-          <h4>Custom Software Development:</h4> Tailored solutions that solve
-          your unique challenges.
-        </span>
-      ),
-    },
-    {
-      emoji: "⏩",
-      text: (
-        <span>
-          <h4>No-Code & Low-Code Solutions:</h4> Speeding up the development
-          process without compromising on quality.
+          <h4>Bespoke Software Development:</h4> Crafting tailored solutions to
+          address your distinct challenges.
         </span>
       ),
     },
@@ -54,8 +50,27 @@ const info = {
       emoji: "🎨",
       text: (
         <span>
-          <h4>Web Design & Development:</h4> Clean, modern designs that are both
-          intuitive and conversion-optimized.
+          <h4>Modern Web Design & Development:</h4> Creating clean,
+          user-friendly designs that drive conversions.
+        </span>
+      ),
+    },
+    {
+      emoji: "🔎",
+      text: (
+        <span>
+          <h4>Effective SEO Optimization:</h4> Boosting your online visibility
+          and search rankings for greater digital success.
+        </span>
+      ),
+    },
+    {
+      emoji: "⏩",
+      text: (
+        <span>
+          <h4>Rapid Development with No-Code & Low-Code Solutions:</h4>{" "}
+          Accelerating the development process while maintaining exceptional
+          quality.
         </span>
       ),
     },
@@ -63,9 +78,9 @@ const info = {
       emoji: "⏳",
       text: (
         <span>
-          <h4>AI-Powered Automation:</h4> Leverage machine learning algorithms
-          to significantly reduce time spent on repetitive tasks and optimize
-          operational processes.
+          <h4>AI-Driven Automation:</h4> Harnessing the power of machine
+          learning algorithms to streamline operations and slash time spent on
+          repetitive tasks.
         </span>
       ),
     },
@@ -73,9 +88,9 @@ const info = {
       emoji: "📈",
       text: (
         <span>
-          <h4>Data Analysis & Visualization:</h4> Unlock the transformative
-          potential of big data to reveal actionable insights through
-          easy-to-understand visualizations.
+          <h4>Unlocking Insights from Big Data:</h4> Leveraging data analytics
+          to reveal actionable & strategic insights through clear and engaging
+          visualizations.
         </span>
       ),
     },
@@ -180,6 +195,17 @@ export default function Home({
 
   return (
     <div style={{ position: "relative", height: "100%", textAlign: "center" }}>
+      <Helmet>
+        <title>
+          Moon Rooster LLC | Leading Web Design & Software Development in
+          Scranton, PA
+        </title>
+        <meta
+          name="description"
+          content="At Moon Rooster LLC, we excel in delivering top-notch web design and custom software development services tailored for businesses in Scranton, PA. Discover our commitment to transforming innovative business ideas into impactful digital realities."
+        />
+        {/* Add other meta tags as needed */}
+      </Helmet>
       {/* Animation container */}
       <div
         className={`${Style["sleeping-rooster-container"]} ${
@@ -310,8 +336,8 @@ export default function Home({
                   emoji="🌎"
                   text={
                     <span>
-                      <h4>Local Presence, Global Reach:</h4> Based in Austin,
-                      but serving clients worldwide.
+                      <h4>From Scranton to the World:</h4> Proudly headquartered
+                      in Scranton, we extend our services to clients worldwide.
                     </span>
                   }
                 />
@@ -322,10 +348,9 @@ export default function Home({
                   emoji="🌐"
                   text={
                     <span>
-                      <h4>Tech-Savvy Team:</h4> Leveraging a mixture of coding
-                      languages and platforms including: HTML, CSS, JS, Python,
-                      SQL, React, WordPress, Squarespace, Shopify, Wix, and
-                      ChatGPT.
+                      <h4>Our Dedicated Tech Team:</h4> Harnessing a wide array
+                      of coding languages and platforms, from HTML and CSS to
+                      Python, JavaScript, React, SQL, and more.
                     </span>
                   }
                 />
@@ -336,7 +361,7 @@ export default function Home({
                   emoji="💰"
                   text={
                     <span>
-                      <h4>Transparent Pricing:</h4> Know what you're paying for
+                      <h4>Clear and Honest Pricing:</h4> Understand your costs
                       with our straightforward pricing models.
                     </span>
                   }
@@ -349,17 +374,17 @@ export default function Home({
             <footer className={Style["contact-footer"]}>
               <div className={Style["contact-info"]}>
                 <div className={Style["contact-item"]}>
-                  <EmojiBullet  text="brian@moonrooster.com" />
+                  <EmojiBullet text="brian@moonrooster.com" />
                 </div>
                 <div className={Style["contact-item"]}>
-                  <EmojiBullet  text="737-346-7797" />
+                  <EmojiBullet text="737-346-7797" />
                 </div>
                 <Box
                   display={"flex"}
                   gap={"1.5rem"}
                   justifyContent={"center"}
                   fontSize={{ xs: "2rem", md: "2.5rem" }}
-                  margin={"10px"}  // Added this line
+                  margin={"10px"} // Added this line
                 >
                   {info.socials.map((social, index) => (
                     <SocialIcon
@@ -373,8 +398,8 @@ export default function Home({
               </div>
               <div className={Style["copyright-section"]}>
                 <a href="/terms-of-use">Terms of Use</a>
-                <a href="/privacy-policy">Privacy Policy</a>
-                © 2023 Moon Rooster LLC. All Rights Reserved.
+                <a href="/privacy-policy">Privacy Policy</a>© 2023 Moon Rooster
+                LLC. All Rights Reserved.
               </div>
             </footer>
           </Box>

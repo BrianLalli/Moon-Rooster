@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import PortfolioBlock from "./PortfolioBlock";
-import {Box, Grid} from "@mui/material";
+import { Box, Grid } from "@mui/material";
 // import {info} from "../../info/Info";
 import Project1 from "../img/Project1.png";
 import Project2 from "../img/Project2.png";
@@ -10,9 +10,10 @@ import Project5 from "../img/Project 5.png";
 import Project6 from "../img/TheJewelLevineFoundation.png";
 import Project7 from "../img/Project7.png";
 import Project8 from "../img/Project8.png";
-import Project9 from "../img/FFStartSit.png"
-import Project10 from "../img/Natu.Health.png"
-import SimpleFooter from "../components/SimpleFooter"
+import Project9 from "../img/FFStartSit.png";
+import Project10 from "../img/Natu.Health.png";
+import SimpleFooter from "../components/SimpleFooter";
+import { Helmet } from "react-helmet";
 
 let colors = ["#F2F2F2", "#1c75bc"];
 
@@ -31,21 +32,21 @@ const info = {
       description: "ZocDoc for Alternative Medicine Practitioners",
       live: "https://natu-health.vercel.app/",
       source: "https://github.com/BrianLalli/Natu.Health",
-      image:Project10,
+      image: Project10,
     },
     {
       title: "The Jewel Levine Foundation",
       description: "Charity Foundation Website",
       live: "https://www.jewellevinefoundation.org/",
       source: "https://www.jewellevinefoundation.org/",
-      image:Project6,
+      image: Project6,
     },
     {
       title: "Fantasy Football Start/Sit",
       description: "Fantasy Football Lineup Setter",
       live: "https://ff-start-em-sit-em.vercel.app/",
       source: "https://github.com/BrianLalli/ff-start-em-sit-em",
-      image:Project9,
+      image: Project9,
     },
     {
       title: "Oogl",
@@ -97,20 +98,35 @@ const info = {
       image: Project4,
     },
   ],
-}
-
-export default function Portfolio() {
-    return (
-        <Box>
-            <Grid container display={'flex'} justifyContent={'center'}>
-                {info.portfolio.map((project, index) => (
-                   <Grid item xs={12} md={6} key={index}>
-                       <PortfolioBlock image={project.image} live={project.live} source={project.source} title={project.title} description={project.description} />
-                   </Grid>
-                ))}
-            </Grid>
-            <SimpleFooter />
-        </Box>
-    );
 };
 
+export default function Portfolio() {
+  return (
+    <Box>
+      <Helmet>
+        <title>
+          Our Work | Web Design & Software Development Projects | Moon Rooster
+          LLC
+        </title>
+        <meta
+          name="description"
+          content="View our portfolio showcasing successful web design and software development projects by Moon Rooster LLC for various clients in Scranton, PA."
+        />
+      </Helmet>
+      <Grid container display={"flex"} justifyContent={"center"}>
+        {info.portfolio.map((project, index) => (
+          <Grid item xs={12} md={6} key={index}>
+            <PortfolioBlock
+              image={project.image}
+              live={project.live}
+              source={project.source}
+              title={project.title}
+              description={project.description}
+            />
+          </Grid>
+        ))}
+      </Grid>
+      <SimpleFooter />
+    </Box>
+  );
+}
