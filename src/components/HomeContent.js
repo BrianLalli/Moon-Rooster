@@ -11,14 +11,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Helmet } from "react-helmet";
 import { Row, Col } from "react-bootstrap";
 
-
 let colors = ["#F2F2F2", "#1c75bc"];
 
 const info = {
   firstName: " Moon Rooster",
   lastName: "Lalli",
   initials: "mr",
-  position: "Your One-Stop Software Development Partner",
+  position: "Your One-Stop Web Design & Software Development Partner",
   selfPortrait: "moonrooster",
   gradient: `-webkit-linear-gradient(135deg, ${colors})`,
   baseColor: colors[0],
@@ -27,8 +26,12 @@ const info = {
       emoji: "🌙🐓",
       text: (
         <span>
-          <h4>Austin, TX-based Software Development Company:</h4> Specializing
-          in delivering end-to-end solutions for your digital needs.
+          <h4>Premier Web Design & Software Development in Scranton, PA</h4>
+          At Moon Rooster, we excel in delivering top-notch web design and
+          custom software development services tailored for businesses in
+          Scranton, PA. Our dedicated team is committed to transforming your
+          innovative business ideas into impactful digital realities, ensuring a
+          robust online presence and streamlined digital operations.
         </span>
       ),
     },
@@ -36,17 +39,8 @@ const info = {
       emoji: "🧑‍💻",
       text: (
         <span>
-          <h4>Custom Software Development:</h4> Tailored solutions that solve
-          your unique challenges.
-        </span>
-      ),
-    },
-    {
-      emoji: "⏩",
-      text: (
-        <span>
-          <h4>No-Code & Low-Code Solutions:</h4> Speeding up the development
-          process without compromising on quality.
+          <h4>Bespoke Software Development:</h4> Crafting tailored solutions to
+          address your distinct challenges.
         </span>
       ),
     },
@@ -54,8 +48,27 @@ const info = {
       emoji: "🎨",
       text: (
         <span>
-          <h4>Web Design & Development:</h4> Clean, modern designs that are both
-          intuitive and conversion-optimized.
+          <h4>Modern Web Design & Development:</h4> Creating clean,
+          user-friendly designs that drive conversions.
+        </span>
+      ),
+    },
+    {
+      emoji: "🔎",
+      text: (
+        <span>
+          <h4>Effective SEO Optimization:</h4> Boosting your online visibility
+          and search rankings for greater digital success.
+        </span>
+      ),
+    },
+    {
+      emoji: "⏩",
+      text: (
+        <span>
+          <h4>Rapid Development with No-Code & Low-Code Solutions:</h4>{" "}
+          Accelerating the development process while maintaining exceptional
+          quality.
         </span>
       ),
     },
@@ -63,9 +76,9 @@ const info = {
       emoji: "⏳",
       text: (
         <span>
-          <h4>AI-Powered Automation:</h4> Leverage machine learning algorithms
-          to significantly reduce time spent on repetitive tasks and optimize
-          operational processes.
+          <h4>AI-Driven Automation:</h4> Harnessing the power of machine
+          learning algorithms to streamline operations and slash time spent on
+          repetitive tasks.
         </span>
       ),
     },
@@ -73,8 +86,9 @@ const info = {
       emoji: "📈",
       text: (
         <span>
-          <h4>Data Analysis & Visualization:</h4> Unleash the power of big data
-          to uncover actionable insights in easy to understand charts.
+          <h4>Unlocking Insights from Big Data:</h4> Leveraging data analytics
+          to reveal actionable & strategic insights through clear and engaging
+          visualizations.
         </span>
       ),
     },
@@ -92,19 +106,24 @@ const info = {
       label: "instagram",
     },
     {
-      link: "https://github.com/BrianLalli",
-      icon: "fa fa-github",
-      label: "github",
+      link: "https://www.tiktok.com/@moon.rooster",
+      icon: "fa-brands fa-tiktok", // Replace with the correct class name if different
+      label: "tiktok",
     },
     {
-      link: "https://www.linkedin.com/in/brianlalli11/",
+      link: "https://www.linkedin.com/company/moon-rooster-llc",
       icon: "fa fa-linkedin",
       label: "linkedin",
     },
     {
       link: "https://twitter.com/moonroosterllc",
-      icon: "fa fa-twitter",
+      icon: "fa-brands fa-x-twitter",
       label: "twitter",
+    },
+    {
+      link: "https://github.com/BrianLalli",
+      icon: "fa fa-github",
+      label: "github",
     },
   ],
 };
@@ -114,7 +133,7 @@ const HomeContent = ({ darkMode = true }) => {
 
   return (
     <div>
-            <Helmet>
+      <Helmet>
         <title>
           Moon Rooster LLC | Leading Web Design & Software Development in
           Scranton, PA
@@ -231,8 +250,8 @@ const HomeContent = ({ darkMode = true }) => {
                 emoji="🌎"
                 text={
                   <span>
-                    <h4>Local Presence, Global Reach:</h4> Based in Austin, but
-                    serving clients worldwide.
+                    <h4>From Scranton to the World:</h4> Proudly headquartered
+                    in Scranton, we extend our services to clients worldwide.
                   </span>
                 }
               />
@@ -243,10 +262,9 @@ const HomeContent = ({ darkMode = true }) => {
                 emoji="🌐"
                 text={
                   <span>
-                    <h4>Tech-Savvy Team:</h4> Leveraging a mixture of coding
-                    languages and platforms including: HTML, CSS, JS, Python,
-                    SQL, React, WordPress, Squarespace, Shopify, Wix, and
-                    ChatGPT.
+                    <h4>Our Dedicated Tech Team:</h4> Harnessing a wide array of
+                    coding languages and platforms, from HTML and CSS to Python,
+                    JavaScript, React, SQL, and more.
                   </span>
                 }
               />
@@ -257,7 +275,7 @@ const HomeContent = ({ darkMode = true }) => {
                 emoji="💰"
                 text={
                   <span>
-                    <h4>Transparent Pricing:</h4> Know what you're paying for
+                    <h4>Clear and Honest Pricing:</h4> Understand your costs
                     with our straightforward pricing models.
                   </span>
                 }
@@ -265,82 +283,79 @@ const HomeContent = ({ darkMode = true }) => {
             </div>
           </Box>
           <Row className="justify-content-center my-5">
-            <h2 style={{ textAlign: "center" }}>
-                      Ready to get started?
-                    </h2>
-              <Col xs={7} md={6} lg={5}>
-                <div id="mc_embed_shell" className="text-center">
-                  <form
-                    action="https://moonrooster.us21.list-manage.com/subscribe/post?u=50b7dd5e8c304cee87f6bfe8d&id=5ba4358a2f&f_id=0048f0e6f0"
-                    method="post"
-                    id="mc-embedded-subscribe-form"
-                    name="mc-embedded-subscribe-form"
-                    className="validate"
-                    target="_blank"
-                  >
-                    <div className="form-group">
-                      <label htmlFor="mce-EMAIL">Email Address *</label>
-                      <input
-                        type="email"
-                        name="EMAIL"
-                        className="form-control"
-                        id="mce-EMAIL"
-                        required
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="mce-FNAME">First Name</label>
-                      <input
-                        type="text"
-                        name="FNAME"
-                        className="form-control"
-                        id="mce-FNAME"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="mce-LNAME">Last Name</label>
-                      <input
-                        type="text"
-                        name="LNAME"
-                        className="form-control"
-                        id="mce-LNAME"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="mce-PHONE">Phone Number</label>
-                      <input
-                        type="text"
-                        name="PHONE"
-                        className="form-control"
-                        id="mce-PHONE"
-                      />
-                    </div>
+            <h2 style={{ textAlign: "center" }}>Ready to get started?</h2>
+            <Col xs={7} md={6} lg={5}>
+              <div id="mc_embed_shell" className="text-center">
+                <form
+                  action="https://moonrooster.us21.list-manage.com/subscribe/post?u=50b7dd5e8c304cee87f6bfe8d&id=5ba4358a2f&f_id=0048f0e6f0"
+                  method="post"
+                  id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form"
+                  className="validate"
+                  target="_blank"
+                >
+                  <div className="form-group">
+                    <label htmlFor="mce-EMAIL">Email Address *</label>
                     <input
-                      type="submit"
-                      value="Get Started"
-                      name="subscribe"
-                      className="btn btn-primary mt-3"
-                      id="mc-embedded-subscribe"
-                      style={{
-                        backgroundColor: "#1c75bc",
-                        borderRadius: "25px",
-                        transition: "background-color 0.3s ease-in-out",
-                        padding: "10px 20px", // Increase padding
-                        fontSize: "1.2rem", // Increase font size
-                      }}
-                      onMouseOver={(e) =>
-                        (e.target.style.backgroundColor = "#155b9c")
-                      }
-                      onMouseOut={(e) =>
-                        (e.target.style.backgroundColor = "#1c75bc")
-                      }
+                      type="email"
+                      name="EMAIL"
+                      className="form-control"
+                      id="mce-EMAIL"
+                      required
                     />
-                  </form>
-                </div>
-              </Col>
-            </Row>
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="mce-FNAME">First Name</label>
+                    <input
+                      type="text"
+                      name="FNAME"
+                      className="form-control"
+                      id="mce-FNAME"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="mce-LNAME">Last Name</label>
+                    <input
+                      type="text"
+                      name="LNAME"
+                      className="form-control"
+                      id="mce-LNAME"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="mce-PHONE">Phone Number</label>
+                    <input
+                      type="text"
+                      name="PHONE"
+                      className="form-control"
+                      id="mce-PHONE"
+                    />
+                  </div>
+                  <input
+                    type="submit"
+                    value="Get Started"
+                    name="subscribe"
+                    className="btn btn-primary mt-3"
+                    id="mc-embedded-subscribe"
+                    style={{
+                      backgroundColor: "#1c75bc",
+                      borderRadius: "25px",
+                      transition: "background-color 0.3s ease-in-out",
+                      padding: "10px 20px", // Increase padding
+                      fontSize: "1.2rem", // Increase font size
+                    }}
+                    onMouseOver={(e) =>
+                      (e.target.style.backgroundColor = "#155b9c")
+                    }
+                    onMouseOut={(e) =>
+                      (e.target.style.backgroundColor = "#1c75bc")
+                    }
+                  />
+                </form>
+              </div>
+            </Col>
+          </Row>
           <br />
-
           <footer className={Style["contact-footer"]}>
             <div className={Style["contact-info"]}>
               <div className={Style["contact-item"]}>
@@ -377,5 +392,4 @@ const HomeContent = ({ darkMode = true }) => {
     </div>
   );
 };
-
 export default HomeContent;

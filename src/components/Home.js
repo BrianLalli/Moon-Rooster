@@ -109,19 +109,24 @@ const info = {
       label: "instagram",
     },
     {
-      link: "https://github.com/BrianLalli",
-      icon: "fa fa-github",
-      label: "github",
+      link: "https://www.tiktok.com/@moon.rooster",
+      icon: "fa-brands fa-tiktok", // Replace with the correct class name if different
+      label: "tiktok",
     },
     {
-      link: "https://www.linkedin.com/in/brianlalli11/",
+      link: "https://www.linkedin.com/company/moon-rooster-llc",
       icon: "fa fa-linkedin",
       label: "linkedin",
     },
     {
       link: "https://twitter.com/moonroosterllc",
-      icon: "fa fa-twitter",
+      icon: "fa-brands fa-x-twitter",
       label: "twitter",
+    },
+    {
+      link: "https://github.com/BrianLalli",
+      icon: "fa fa-github",
+      label: "github",
     },
   ],
 };
