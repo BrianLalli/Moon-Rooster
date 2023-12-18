@@ -9,6 +9,7 @@ import { useLocation } from "react-router-dom"; // Import useLocation
 import classNames from "classnames";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Helmet } from "react-helmet";
+import { Row, Col } from "react-bootstrap";
 
 
 let colors = ["#F2F2F2", "#1c75bc"];
@@ -263,7 +264,81 @@ const HomeContent = ({ darkMode = true }) => {
               />
             </div>
           </Box>
-
+          <Row className="justify-content-center my-5">
+            <h2 style={{ textAlign: "center" }}>
+                      Ready to get started?
+                    </h2>
+              <Col xs={7} md={6} lg={5}>
+                <div id="mc_embed_shell" className="text-center">
+                  <form
+                    action="https://moonrooster.us21.list-manage.com/subscribe/post?u=50b7dd5e8c304cee87f6bfe8d&id=5ba4358a2f&f_id=0048f0e6f0"
+                    method="post"
+                    id="mc-embedded-subscribe-form"
+                    name="mc-embedded-subscribe-form"
+                    className="validate"
+                    target="_blank"
+                  >
+                    <div className="form-group">
+                      <label htmlFor="mce-EMAIL">Email Address *</label>
+                      <input
+                        type="email"
+                        name="EMAIL"
+                        className="form-control"
+                        id="mce-EMAIL"
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="mce-FNAME">First Name</label>
+                      <input
+                        type="text"
+                        name="FNAME"
+                        className="form-control"
+                        id="mce-FNAME"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="mce-LNAME">Last Name</label>
+                      <input
+                        type="text"
+                        name="LNAME"
+                        className="form-control"
+                        id="mce-LNAME"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="mce-PHONE">Phone Number</label>
+                      <input
+                        type="text"
+                        name="PHONE"
+                        className="form-control"
+                        id="mce-PHONE"
+                      />
+                    </div>
+                    <input
+                      type="submit"
+                      value="Get Started"
+                      name="subscribe"
+                      className="btn btn-primary mt-3"
+                      id="mc-embedded-subscribe"
+                      style={{
+                        backgroundColor: "#1c75bc",
+                        borderRadius: "25px",
+                        transition: "background-color 0.3s ease-in-out",
+                        padding: "10px 20px", // Increase padding
+                        fontSize: "1.2rem", // Increase font size
+                      }}
+                      onMouseOver={(e) =>
+                        (e.target.style.backgroundColor = "#155b9c")
+                      }
+                      onMouseOut={(e) =>
+                        (e.target.style.backgroundColor = "#1c75bc")
+                      }
+                    />
+                  </form>
+                </div>
+              </Col>
+            </Row>
           <br />
 
           <footer className={Style["contact-footer"]}>

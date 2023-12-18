@@ -31,6 +31,7 @@ body {
   box-shadow: 0 0 5px #1c75bc, inset 0 1px 3px rgba(0,0,0,0.1);
 }
 
+
 /* Action Button */
 .ac_btn {
   font-family: 'Roboto', Helvetica, sans-serif;
@@ -147,55 +148,3 @@ body {
   }
 }
 
-/* Existing Style for ac_btn */
-.Style_ac_btn {
-  max-width: 200px;
-  margin: 0 auto;
-  display: block;
-}
-
-/* Newsletter Section */
-#mc_embed_shell {
-  padding: 30px;
-  background-color: #f3f4f6; /* Adjust to match your brand */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
-}
-
-/* Field Group */
-.mc-field-group {
-  margin-bottom: 15px;
-}
-
-/* Labels */
-.mc-field-group label {
-  display: block;
-  margin-bottom: .5rem;
-  font-weight: 600;
-  color: #333; /* Adjust to match your brand */
-}
-
-/* Input fields */
-.mc-field-group input {
-  width: 50%;
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: 1px solid #1c75bc; /* Adjust to match your brand */
-  font-size: 1rem;
-}
-
-/* Subscribe Button */
-#mc-embedded-subscribe {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-  #mc_embed_shell {
-    padding: 20px;
-  }
-}

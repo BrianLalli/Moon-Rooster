@@ -80,7 +80,8 @@ export default function ContactUs() {
                 style={{ display: "flex", justifyContent: "center", gap: "4%" }}
               >
                 <div className="form-group" style={{ width: "48%" }}>
-                  <label htmlFor="name">Name</label>
+                <label htmlFor="name" style={{ color: 'black' }}>Name</label>
+
                   <input
                     className={Style.formControl}
                     id="name"
@@ -92,7 +93,7 @@ export default function ContactUs() {
                   />
                 </div>
                 <div className="form-group" style={{ width: "48%" }}>
-                  <label htmlFor="email">Email</label>
+                <label htmlFor="name" style={{ color: 'black' }}>Email</label>
                   <input
                     className={Style.formControl}
                     id="email"
@@ -106,7 +107,7 @@ export default function ContactUs() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="message">Message</label>
+              <label htmlFor="name" style={{ color: 'black' }}>Message</label>
                 <textarea
                   className={Style.formControl}
                   id="message"
@@ -144,83 +145,8 @@ export default function ContactUs() {
             </form>
           </Col>
         </Row>
-
-        <Row className="justify-content-center">
-          <Col lg="6" className="mt-5">
-            <div id="mc_embed_shell" className="text-center">
-              <form
-                action="https://moonrooster.us21.list-manage.com/subscribe/post?u=50b7dd5e8c304cee87f6bfe8d&id=5ba4358a2f&f_id=0048f0e6f0"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                className="validate"
-                target="_blank"
-              >
-                <h2 style={{ textAlign: "center" }}>
-                  Subscribe to our Newsletter
-                </h2>
-                <div className="form-group">
-                  <label htmlFor="mce-EMAIL">Email Address *</label>
-                  <input
-                    type="email"
-                    name="EMAIL"
-                    className="form-control"
-                    id="mce-EMAIL"
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="mce-FNAME">First Name</label>
-                  <input
-                    type="text"
-                    name="FNAME"
-                    className="form-control"
-                    id="mce-FNAME"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="mce-LNAME">Last Name</label>
-                  <input
-                    type="text"
-                    name="LNAME"
-                    className="form-control"
-                    id="mce-LNAME"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="mce-PHONE">Phone Number</label>
-                  <input
-                    type="text"
-                    name="PHONE"
-                    className="form-control"
-                    id="mce-PHONE"
-                  />
-                </div>
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  name="subscribe"
-                  className="btn btn-primary mt-3"
-                  id="mc-embedded-subscribe"
-                  style={{
-                    backgroundColor: "#1c75bc",
-                    borderRadius: "25px",
-                    transition: "background-color 0.3s ease-in-out",
-                  }}
-                  onMouseOver={(e) =>
-                    (e.target.style.backgroundColor = "#155b9c")
-                  }
-                  onMouseOut={(e) =>
-                    (e.target.style.backgroundColor = "#1c75bc")
-                  }
-                />
-              </form>
-            </div>
-          </Col>
-        </Row>
-
-        <SimpleFooter />
       </Container>
+      <SimpleFooter />
     </div>
   );
 }

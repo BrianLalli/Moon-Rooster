@@ -226,8 +226,19 @@ a:hover {
   gap: 10px;  /* Added gap for internal spacing */
 }
 
+.newsletter-section {
+  margin-top: 0px; // Adjust as needed
+  margin-bottom: 30px; // Adjust as needed
+}
 
-
+.newsletter-heading {
+  font-size: large;
+  text-align: center;
+  width: 100%; // Responsive width
+  max-width: 600px; // Maximum width
+  margin: auto; // Center the heading
+  // Add any other styling like font size, color, etc.
+}
 
 @media (max-width: 768px) {
   .who-we-are-card, .what-we-do-card, .why-choose-us-card {
