@@ -15,7 +15,6 @@ nav {
   }
 }
 
-
 .active {
   border-bottom: 5px solid;
   border-image-slice: 1;
@@ -28,6 +27,7 @@ li {
   &:hover {
     transform: translateY(-3px);
     transition: $transition;
+    color: $moonblue;
   }
 }
 
@@ -56,8 +56,6 @@ li {
     height: auto; // Reset to auto for mobile screens
   }
 }
-
-
 
 /* Add new styles for mobile header container */
 .header-container-mobile {

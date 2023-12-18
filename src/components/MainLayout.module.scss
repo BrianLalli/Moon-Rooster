@@ -53,6 +53,12 @@ footer {
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
+
+  a, i, li {
+    color: $dark;
+    transition: color 400ms;
+    font-size: calc(1rem + 0.2vw); // Dynamic font size
+  }
 }
 
 .moon-glow {

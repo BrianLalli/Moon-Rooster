@@ -38,6 +38,12 @@ const links = [
     to: "/contact",
     active: "contact",
   },
+  {
+    name: "Merch",
+    to: "https://moon-rooster-llc.printify.me/products",
+    active: "merch",
+    external: true, // flag to indicate external link
+  },
 ];
 
 export default function Navbar({ darkMode, handleClick }) {
@@ -76,11 +82,23 @@ export default function Navbar({ darkMode, handleClick }) {
                 component={"li"}
                 className={link.active === active && !link.type && Style.active}
               >
-                {link.linkComponent ? (
+                {link.external ? (
+                  <a
+                    href={link.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={Style.navbarLink} // Use the same class as other nav links for styling
+                  >
+                    <p style={{ paddingBottom: "0.5rem" }}>{link.name}</p>
+                  </a>
+                ) : link.linkComponent ? (
                   <link.linkComponent
                     to={link.to}
                     onClick={() => {
                       setActive(link.active);
+                      if (!matches) {
+                        toggleDrawer();
+                      }
                     }}
                     state={link.state}
                   >
@@ -94,6 +112,9 @@ export default function Navbar({ darkMode, handleClick }) {
                     to={link.to}
                     onClick={() => {
                       setActive(link.active);
+                      if (!matches) {
+                        toggleDrawer();
+                      }
                     }}
                   >
                     {!link.type && (
@@ -121,9 +142,23 @@ export default function Navbar({ darkMode, handleClick }) {
           <ul>
             {links.map((link, index) => (
               <li key={index}>
-                <Link to={link.to} onClick={() => toggleDrawer()}>
-                  {link.name}
-                </Link>
+                {link.external ? (
+                  <a
+                    href={link.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={Style.navLink} // Use the same class as other nav links for styling
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.to}
+                    onClick={() => toggleDrawer()}
+                  >
+                    {link.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

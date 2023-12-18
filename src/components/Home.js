@@ -9,14 +9,14 @@ import SocialIcon from "./SocialIcon";
 import DarkAnimation from "../img/MR_1080x1920_BlackBG 2.mp4";
 import LightAnimation from "../img/MR_1080x1920_WhiteBG 2.mp4";
 import { Container } from "react-bootstrap";
-import { useLocation } from "react-router-dom"; // Import useLocation
+// import { useLocation } from "react-router-dom"; // Import useLocation
 import HomeContent from "./HomeContent";
 import { Helmet } from "react-helmet";
 
 let colors = ["#F2F2F2", "#1c75bc"];
 
 const info = {
-  firstName: " Moon Rooster LLC",
+  firstName: " Moon Rooster",
   lastName: "Lalli",
   initials: "mr",
   position: "Your One-Stop Web Design & Software Development Partner",
