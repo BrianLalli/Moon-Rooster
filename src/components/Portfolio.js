@@ -12,6 +12,8 @@ import Project7 from "../img/Project7.png";
 import Project8 from "../img/Project8.png";
 import Project9 from "../img/FFStartSit.png";
 import Project10 from "../img/Natu.Health.png";
+import Project11 from "../img/FAADE.png";
+import Project12 from "../img/DTR.png";
 import SimpleFooter from "../components/SimpleFooter";
 import { Helmet } from "react-helmet";
 
@@ -27,6 +29,20 @@ const info = {
   baseColor: colors[0],
   portfolio: [
     // This is where your portfolio projects will be detailed
+    {
+      title: "FAADE",
+      description: "Football Training in Scranton, PA",
+      live: "https://faadesports.com/?share=6f8cbd5fff423f2013f6f59c480c24842c7afcf51c34c03ed5dd052d6f1336a7",
+      source: "https://faadesports.com/?share=6f8cbd5fff423f2013f6f59c480c24842c7afcf51c34c03ed5dd052d6f1336a7",
+      image: Project11,
+    },
+    {
+      title: "Dreams to Reality",
+      description: "Basketball Training in Miami, FL",
+      live: "https://dtrhoops.com/?share=001fec7a64388a5e6bcb7327b747dfccc740d99103fd85827c6be4f00192c629",
+      source: "https://dtrhoops.com/?share=001fec7a64388a5e6bcb7327b747dfccc740d99103fd85827c6be4f00192c629",
+      image: Project12,
+    },
     {
       title: "Natu.Health",
       description: "ZocDoc for Alternative Medicine Practitioners",
