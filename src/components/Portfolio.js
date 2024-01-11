@@ -14,6 +14,7 @@ import Project9 from "../img/FFStartSit.png";
 import Project10 from "../img/Natu.Health.png";
 import Project11 from "../img/FAADE.png";
 import Project12 from "../img/DTR.png";
+import Project13 from "../img/GiveAaS.png"
 import SimpleFooter from "../components/SimpleFooter";
 import { Helmet } from "react-helmet";
 
@@ -29,6 +30,13 @@ const info = {
   baseColor: colors[0],
   portfolio: [
     // This is where your portfolio projects will be detailed
+    {
+      title: "Give Athletes a Smile",
+      description: "Dental Program for Collegiate Student-Athletes",
+      live: "https://briana9479df21c6.wpcomstaging.com/?share=237f636cb95415fdf2d3ad76d8e8ef41b20cdc2201802728eb85d8198729bc46",
+      source: "https://briana9479df21c6.wpcomstaging.com/?share=237f636cb95415fdf2d3ad76d8e8ef41b20cdc2201802728eb85d8198729bc46",
+      image: Project13,
+    },
     {
       title: "FAADE",
       description: "Football Training in Scranton, PA",
