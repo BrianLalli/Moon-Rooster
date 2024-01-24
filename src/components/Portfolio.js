@@ -15,6 +15,7 @@ import Project10 from "../img/Natu.Health.png";
 import Project11 from "../img/FAADE.png";
 import Project12 from "../img/DTR.png";
 import Project13 from "../img/GiveAaS.png"
+import Project14 from "../img/ai-quiz-version.png";
 import SimpleFooter from "../components/SimpleFooter";
 import { Helmet } from "react-helmet";
 
@@ -30,6 +31,13 @@ const info = {
   baseColor: colors[0],
   portfolio: [
     // This is where your portfolio projects will be detailed
+    {
+      title: "The Moon Rooster Quiz",
+      description: "AI Powered Quiz App Built With React",
+      live: "https://ai-moon-rooster-quiz.vercel.app/",
+      source: "https://github.com/BrianLalli/moon-rooster-quiz/tree/ai-quiz-version",
+      image: Project14,
+    },
     {
       title: "Give Athletes a Smile",
       description: "Dental Program for Collegiate Student-Athletes",

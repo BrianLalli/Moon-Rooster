@@ -13,6 +13,7 @@ import { Container } from "react-bootstrap";
 import HomeContent from "./HomeContent";
 import { Helmet } from "react-helmet";
 import { Row, Col } from "react-bootstrap";
+import Atropos from 'atropos/react';
 
 let colors = ["#F2F2F2", "#1c75bc"];
 

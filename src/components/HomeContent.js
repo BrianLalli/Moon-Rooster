@@ -10,6 +10,7 @@ import classNames from "classnames";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Helmet } from "react-helmet";
 import { Row, Col } from "react-bootstrap";
+import Atropos from 'atropos/react';
 
 let colors = ["#F2F2F2", "#1c75bc"];
 
